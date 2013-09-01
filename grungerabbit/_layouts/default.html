@@ -10,37 +10,27 @@
         <link rel="stylesheet" href="/lib/css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/lib/css/main.css">
+        <link rel="stylesheet" href="/lib/css/styles.css">
 
     </head>
     <body>
 
         <div class="container">
           <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
+			  {% include header.html %}
 
-                {{ content }}
 
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
+			  		{{ content }}
+
+
+			{% include footer.html %}
         </div> <!-- /container -->
 
+		<script src="/lib/js/jquery.js"></script>
+		<script src="/lib/js/jquery.lettering.js"></script>
+		
+		<script>
+		$(".title, .name").lettering();
+		</script>
     </body>
 </html>

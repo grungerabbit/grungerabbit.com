@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'WhitneyLight';
+  src: url('../fonts/whitney/whitneyhtf-light-webfont.eot');
+  src: url('../fonts/whitney/whitneyhtf-light-webfont.woff') format('woff'), url('../fonts/whitney/whitneyhtf-light-webfont.ttf') format('truetype'), url('../fonts/whitney/whitneyhtf-light-webfont.svg#webfont8dpc4tr7') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackoutTwoAM';
+  src: url('../fonts/webfont-twoam/blackout_two_am-webfont.eot');
+  src: url('../fonts/webfont-twoam/blackout_two_am-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/webfont-twoam/blackout_two_am-webfont.woff') format('woff'), url('../fonts/webfont-twoam/blackout_two_am-webfont.ttf') format('truetype'), url('../fonts/webfont-twoam/blackout_two_am-webfont.svg#BlackoutTwoAM') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackoutMidnight';
+  src: url('../fonts/webfont-midnight/blackout_midnight-webfont.eot');
+  src: url('../fonts/webfont-midnight/blackout_midnight-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/webfont-midnight/blackout_midnight-webfont.woff') format('woff'), url('../fonts/webfont-midnight/blackout_midnight-webfont.ttf') format('truetype'), url('../fonts/webfont-midnight/blackout_midnight-webfont.svg#BlackoutMidnight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackoutSunrise';
+  src: url('../fonts/webfont-sunrise/blackout_sunrise-webfont.eot');
+  src: url('../fonts/webfont-sunrise/blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/webfont-sunrise/blackout_sunrise-webfont.woff') format('woff'), url('../fonts/webfont-sunrise/blackout_sunrise-webfont.ttf') format('truetype'), url('../fonts/webfont-sunrise/blackout_sunrise-webfont.svg#BlackoutSunrise') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font: 1em "WhitneyLight";
+}
+.header .name {
+  font-family: "BlackoutSunrise";
+}
+.header .title {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 8em;
+  letter-spacing: -0.1em;
+  text-transform: uppercase;
+}
+.header .title span[class*="char"] {
+  position: relative;
+}
+.header .title .char2 {
+  left: -0.02em;
+}
+.header .title .char3 {
+  left: -0.02em;
+}
+.header .title .char4 {
+  left: -0.03em;
+}
+.header .title .char5 {
+  left: -0.01em;
+}
+.header .title .char6 {
+  left: -0.03em;
+}
+.header .title .char7 {
+  left: -0.025em;
+}
+.header .title .char8 {
+  left: 0.012em;
+}
+.header .title .char9 {
+  left: 0.03em;
+}
+.header .title .char10 {
+  left: 0.02em;
+}
+.header .title .char11 {
+  left: 0.03em;
+}
+.header .title .char12 {
+  left: 0.075em;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #facade;
+  font-size: 100%;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+li {
+  list-style: none;
+}
