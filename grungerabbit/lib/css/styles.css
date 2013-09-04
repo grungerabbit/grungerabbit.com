@@ -1,3 +1,8 @@
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 @font-face {
   font-family: 'WhitneyLight';
   src: url('../fonts/whitney/whitneyhtf-light-webfont.eot');
@@ -26,67 +31,211 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'grungerabbit';
+  src: url('../fonts/grungerabbit/grungerabbit.eot');
+  src: url('../fonts/grungerabbit/grungerabbit.eot?#iefix') format('embedded-opentype'), url('../fonts/grungerabbit/grungerabbit.woff') format('woff'), url('../fonts/grungerabbit/grungerabbit.ttf') format('truetype'), url('../fonts/grungerabbit/grungerabbit.svg#grungerabbit') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'grungerabbit';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-grlogo {
+  font-family: 'grungerabbit';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-grlogo:before {
+  content: "\3007";
+}
 body {
   font: 1em "WhitneyLight";
+  font-weight: light;
+}
+a:link,
+a:visited,
+a:active {
+  color: #fe0095;
+}
+a:hover {
+  color: #ffb7b7;
 }
 .header .name {
-  font-family: "BlackoutSunrise";
+  font-family: "BlackoutMidnight";
 }
-.header .title {
-  font-family: Helvetica;
-  font-weight: bold;
-  font-size: 8em;
-  letter-spacing: -0.1em;
-  text-transform: uppercase;
-}
-.header .title span[class*="char"] {
+.header .name span {
   position: relative;
 }
-.header .title .char2 {
+.header .name span.char5 {
+  left: -0.055em;
+}
+.header .name span.char6 {
   left: -0.02em;
 }
-.header .title .char3 {
+.header .title {
+  text-align: center;
+  color: rgba(254, 0, 149, 0.9);
+  font-family: "BlackoutMidnight";
+  font-weight: bold;
+  font-size: 9em;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+}
+.header .title span {
+  position: relative;
+}
+.header .title span.char2 {
   left: -0.02em;
 }
-.header .title .char4 {
-  left: -0.03em;
-}
-.header .title .char5 {
-  left: -0.01em;
-}
-.header .title .char6 {
-  left: -0.03em;
-}
-.header .title .char7 {
+.header .title span.char3 {
   left: -0.025em;
 }
-.header .title .char8 {
-  left: 0.012em;
+.header .title span.char5 {
+  left: 0.015em;
 }
-.header .title .char9 {
+.header .title span.char11 {
+  left: 0.01em;
+}
+.header .title span.char12 {
   left: 0.03em;
 }
-.header .title .char10 {
-  left: 0.02em;
+.header .title em {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-family: "BlackoutSunrise";
+  color: rgba(255, 255, 0, 0.75);
+  position: absolute;
+  left: 0.01em;
+  top: 0.030em;
 }
-.header .title .char11 {
-  left: 0.03em;
+.header .tagline {
+  font-size: 2em;
+  line-height: 1.2;
 }
-.header .title .char12 {
-  left: 0.075em;
+.header .tagline span {
+  font: 1.25em "BlackoutMidnight";
+  display: block;
+  position: relative;
+  top: .15em;
+}
+.posts h1.where {
+  font-size: 3em;
+  font-family: "BlackoutTwoAM";
+  color: black;
+  line-height: 1.25em;
+  clear: both;
+}
+.posts span {
+  float: right;
+  margin-top: 1em;
+}
+.posts strong {
+  font-family: "BlackoutSunrise";
+}
+.posts h2 {
+  margin: .25em 0;
+  padding: 2em;
+  background: rgba(255, 255, 0, 0.75);
+}
+.posts p {
+  text-align: right;
+}
+.quote {
+  font: 2.5em "BlackoutMidnight";
 }
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  background: #facade;
-  font-size: 100%;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(25deg, linear, 0 0, 0 100%, color-stop(0.5, rgba(153, 255, 221, 0.4)), color-stop(0.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(25deg, rgba(153, 255, 221, 0.4) 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(25deg, rgba(153, 255, 221, 0.4) 50%, transparent 50%, transparent);
+  background-image: linear-gradient(25deg, rgba(153, 255, 221, 0.4) 50%, transparent 50%, transparent);
+  -webkit-background-size: 180px 180px;
+  -moz-background-size: 180px 180px;
+  background-size: 180px 180px;
+}
+::selection {
+  background: #ffb7b7;
+  /* Safari */
+
+}
+::-moz-selection {
+  background: #ffb7b7;
+  /* Firefox */
+
 }
 .container {
-  width: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+.site {
+  max-width: 50em;
   margin: 0 auto;
 }
 li {
   list-style: none;
+}
+.header .icon-grlogo {
+  font-size: 30em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(204, 0, 255, 0.8);
+  z-index: -1;
+}
+.header .title {
+  padding: 1em 0;
+}
+.header .name {
+  display: inline;
+}
+.construction {
+  padding: 5em 0;
+  width: 98%;
+  max-width: 35em;
+  margin: 0;
+}
+.posts {
+  margin: 0 0 3em;
+  font-size: 1.5em;
+}
+.posts header {
+  display: block;
+  clear: both;
+  padding: 2em 0 3em;
+}
+.footer .contact {
+  float: left;
+  padding: .5em 0;
+  width: 33%;
+  min-width: 15em;
+}
+.footer .colophon {
+  clear: both;
+  text-align: right;
 }

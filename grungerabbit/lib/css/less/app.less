@@ -2,17 +2,66 @@
 	margin: 0;
 	padding: 0;
 }
-body {
-	background: #facade;
-	font-size: 100%;
-}
+//linear-gradient(45deg, #555 25%, transparent 25%, transparent), linear-gradient(-45deg, #555 25%, transparent 25%, transparent)
 
+body {
+	.gradient(#fff, 153, 255, 221, .4, 180px, 180px, 25deg);
+}
+::selection {
+	background: @coral; /* Safari */
+	}
+::-moz-selection {
+	background: @coral; /* Firefox */
+}
 .container {
-	width: 90%;
+	width: 100%;
+	margin: 0 auto;
+}
+.site {
+	max-width: 50em;
 	margin: 0 auto;
 }
 li {
 	list-style: none;
 }
 .header {
+	//background: url(../../photo.jpg) top right;
+	.icon-grlogo {
+		font-size: 30em;
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: @cofT;
+		z-index: -1;
+	}
+	.title { padding: 1em 0; }
+	.name { display: inline; }
+}
+.construction {
+	padding: 5em 0;
+	width: 98%;
+	max-width: 35em;
+	margin: 0;
+}
+.posts {
+	margin: 0 0 3em;
+	font-size: 1.5em;
+	header {
+		display: block;
+		clear: both;
+		padding: 2em 0 3em;
+	}
+
+}
+.footer {
+	.contact {
+		float: left;
+		padding: .5em 0;
+		width: 33%;
+		min-width: 15em;
+	}
+	.colophon {
+		clear: both;
+		text-align: right;
+	}
 }

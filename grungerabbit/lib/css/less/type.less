@@ -1,29 +1,87 @@
 body {
 	font: 1em @whitney;
+	font-weight: light;
+}
+a:link, a:visited, a:active {
+	color: @grPink;
+}
+a:hover {
+	color: @coral;
 }
 .header {
 	.name {
-		font-family: @sunrise;
+		font-family: @midnight;
+		span {
+			position: relative;
+			&.char5 {
+				left: -0.055em;
+			}
+			&.char6 {
+				left: -0.02em;
+			}
+		}
 	}
 	.title { 
-		font-family: Helvetica; 
+		text-align: center;
+		color: @grPinkT;
+		font-family: @midnight; 
 		font-weight: bold;
-		font-size: 8em;
-		letter-spacing: -0.1em;
+		font-size: 9em;
+		letter-spacing: 0em;
 		text-transform: uppercase;
-		span[class*="char"] {
+		span {
 			position: relative;
+			
+			&.char2 { left: -0.02em; }
+			&.char3 { left: -0.025em; }
+			&.char5 { left: 0.015em; }
+			&.char11 { left: 0.01em;}
+			&.char12 { left: 0.03em;}
 		}
-		.char2 { left: -0.02em; }
-		.char3 { left: -0.02em; }
-		.char4 { left: -0.03em; }
-		.char5 { left: -0.01em; }
-		.char6 { left: -0.03em; }
-		.char7 { left: -0.025em; }
-		.char8 { left: 0.012em; }
-		.char9 { left: 0.03em; }
-		.char10 { left: 0.02em;}
-		.char11 { left: 0.03em;}
-		.char12 { left: 0.075em;}
+		em {
+			.unselectable;
+			font-family: @sunrise;
+			color: @grYellowT;
+			position: absolute;
+			left: 0.01em;
+			top: 0.030em;
+		}
 	}
+	.tagline {
+		font-size: 2em;
+		line-height: 1.2;
+		span {
+			font: 1.25em @midnight;
+			display: block;
+			position: relative;
+			top: .15em;
+		}
+	}
+}
+.posts {
+	h1.where {
+		font-size: 3em;
+		font-family: @highlight;
+		color: black;
+		line-height: 1.25em;
+		clear: both;
+	}
+	span {
+		float: right;
+		margin-top: 1em;
+	}
+	strong {
+		font-family: @sunrise;
+	}
+	h2 {
+		margin: .25em 0;
+		padding: 2em;
+		background: @grYellowT;
+	}
+	p {
+		text-align: right;
+	}
+}
+.quote {
+	font: 2.5em @midnight;
 }
