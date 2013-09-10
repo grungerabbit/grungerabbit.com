@@ -71,7 +71,6 @@ you can use the generic selector below, but it's slower:
 }
 body {
   font: 1em "WhitneyLight";
-  font-weight: light;
 }
 a:link,
 a:visited,
@@ -171,7 +170,7 @@ a:hover {
 }
 body {
   background-color: #ffffff;
-  background-image: -webkit-gradient(25deg, linear, 0 0, 0 100%, color-stop(0.5, rgba(153, 255, 221, 0.4)), color-stop(0.5, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(25deg, 0 0, 0 100%, color-stop(0.5, rgba(153, 255, 221, 0.4)), color-stop(0.5, transparent), to(transparent));
   background-image: -moz-linear-gradient(25deg, rgba(153, 255, 221, 0.4) 50%, transparent 50%, transparent);
   background-image: -o-linear-gradient(25deg, rgba(153, 255, 221, 0.4) 50%, transparent 50%, transparent);
   background-image: linear-gradient(25deg, rgba(153, 255, 221, 0.4) 50%, transparent 50%, transparent);
