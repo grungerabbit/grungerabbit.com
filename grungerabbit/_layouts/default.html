@@ -29,9 +29,13 @@
 
 		</script>
 		
+		
+
+		
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     </head>
     <body>
+		<p class="count">test</p>
 
         <div class="container">
 			
@@ -45,5 +49,20 @@
 		<script src="/lib/js/jquery.js"></script>
 		<script src="/lib/js/jquery.lettering.js"></script>
 		<script src="/lib/js/app.js"></script>
+		
+		<script>
+		$(document).ready(function() {
+    
+		    var emPX = 16;
+    
+		    $(".count").text($(window).width()+ "px " + Math.round($(window).width()/emPX * 100) / 100 + "em");
+
+			$(window).resize(function() {
+			$(".count").text($(window).width()+ "px " + Math.round($(window).width()/emPX * 100) / 100 + "em");
+			});
+		});
+		
+		</script>
+		
     </body>
 </html>
