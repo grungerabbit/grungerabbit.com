@@ -174,45 +174,6 @@ a:hover {
 .quote {
   font: 2.5em "BlackoutMidnight";
 }
-@media only screen and (min-width: 70em) {
-  .site {
-    max-width: 50em;
-    width: 60%;
-  }
-}
-@media only screen and (min-width: 50em) and (max-width: 70em) {
-  .site {
-    max-width: 50em;
-    width: 80%;
-  }
-  .header .title {
-    font-size: 7em;
-  }
-}
-@media only screen and (min-width: 40em) and (max-width: 50em) {
-  .header .title {
-    font-size: 6em;
-  }
-  .site {
-    width: 90%;
-    max-width: 45em;
-  }
-}
-@media only screen and (max-width: 40em) {
-  .header .title {
-    font-size: 5em;
-  }
-  .container {
-    padding: 1em;
-  }
-  .site {
-    width: 100%;
-    max-width: 40em;
-  }
-  .posts h2 {
-    padding: 1em;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -251,8 +212,6 @@ li {
 .header .icon-grlogo {
   font-size: 30em;
   position: absolute;
-  top: 0;
-  right: 0;
   color: rgba(204, 0, 255, 0.8);
   z-index: -1;
 }
@@ -286,4 +245,64 @@ li {
 .footer .colophon {
   clear: both;
   text-align: right;
+}
+@media only screen and (min-width: 70em) {
+  .site {
+    max-width: 50em;
+    width: 60%;
+  }
+  .header .icon-grlogo {
+    top: 0;
+    left: 50%;
+    margin-left: .25em;
+  }
+}
+@media only screen and (min-width: 50em) and (max-width: 70em) {
+  .site {
+    max-width: 50em;
+    width: 80%;
+  }
+  .header .title {
+    font-size: 7em;
+  }
+  .header .icon-grlogo {
+    top: 0;
+    left: 50%;
+    margin-left: 0em;
+  }
+}
+@media only screen and (min-width: 40em) and (max-width: 50em) {
+  .header .title {
+    font-size: 6em;
+  }
+  .header .icon-grlogo {
+    top: 0;
+    left: 50%;
+    margin-left: -0.25em;
+  }
+  .site {
+    width: 90%;
+    max-width: 45em;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .header .title {
+    font-size: 5em;
+  }
+  .header .icon-grlogo {
+    font-size: 20em;
+    top: .2em;
+    left: 50%;
+    margin-left: -0.5em;
+  }
+  .container {
+    padding: 1em;
+  }
+  .site {
+    width: 100%;
+    max-width: 40em;
+  }
+  .posts h2 {
+    padding: 1em;
+  }
 }
