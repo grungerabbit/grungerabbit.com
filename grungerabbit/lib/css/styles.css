@@ -145,6 +145,7 @@ a:hover {
   color: black;
   line-height: 1.25em;
   clear: both;
+  word-wrap: break-word;
 }
 .posts span {
   float: right;
@@ -192,9 +193,15 @@ a:hover {
   .header .title {
     font-size: 6em;
   }
+  .container {
+    padding: 1em;
+  }
   .site {
-    width: 98%;
-    max-width: 36em;
+    width: 100%;
+    max-width: 40em;
+  }
+  .posts h2 {
+    padding: 1em;
   }
 }
 * {
