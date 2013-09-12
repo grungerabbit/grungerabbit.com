@@ -1,0 +1,42 @@
+@import "../../_less/variables.less";
+@import "../../_less/mixins.less";
+
+body {
+	background: @grayMed;
+}
+.content {
+	font-size: @bump * 2;
+	.meta {
+		color: @grYellowT;
+		text-align: right;
+		&:before {
+			content: 'last updated ';
+		}
+	}
+	.post.title {
+		text-align: center;
+		font-size: @oversize/2;
+	}
+	h3 {
+		color: @mint;
+		font-family: @highlight;
+		font-size: @bump;
+	}
+	h6 {
+		text-transform: uppercase;
+		color: @grayMedDark;
+	}
+	li {
+		display: block;
+		text-align: left;
+		&:after {
+		    content: '';
+		    display: inline-block;
+		    width: 100%;
+		}
+
+	}
+	
+		
+	
+}

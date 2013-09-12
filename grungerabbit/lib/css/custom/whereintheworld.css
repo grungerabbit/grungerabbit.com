@@ -1,0 +1,11 @@
+body {
+  background: #ffff00;
+}
+.content .meta {
+  color: #fe0095;
+  text-align: right;
+}
+.content .post.title {
+  text-align: center;
+  font-size: 5em;
+}

@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Where in the world is grungerabbit?"
+excerpt: false
+css: whereintheworld.css
 ---
 #lol what have you been doing
 

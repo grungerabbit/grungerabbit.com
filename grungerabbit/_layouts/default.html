@@ -15,7 +15,7 @@
 		<meta name="description" content="perhaps a silly girl, but definitely not just ink on a milk cart." />
 		<meta name="keywords" content="grungerabbit grunge rabbit cheryl wu cheryl jane wu westfield nj nyc ny nyu new york university gallatin kurdt koebane greedytrees art graphic design illustration gallery portfolio commissions awesome sparkle fairy princess" />
 		
-		<script type="text/javascript">
+		<!--<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-12519345-1']);
@@ -27,31 +27,32 @@
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 
-		</script>
-		
-		
-
+		</script>-->
 		
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+		
+		{% if page.css %}
+			<link rel="stylesheet" href="/lib/css/custom/{{page.css}}">
+		{% endif %}
     </head>
     <body>
 
         <div class="container">
+			{% unless page.splash %}
+				{% include header.html %}
+			{% endunless %}
+			{% if page.splash %}
+				{% include splash.html %}
+			{% endif %}
 			
-			  {% include header.html %}
-			  <div class="site">
-				  {{ content }}
-			 </div>
+			<div class="site content">
+			   {{ content }}
+			</div>
 			{% include footer.html %}
         </div> <!-- /container -->
 
 		<script src="/lib/js/jquery.js"></script>
 		<script src="/lib/js/jquery.lettering.js"></script>
 		<script src="/lib/js/app.js"></script>
-		
-		<script>
-
-		</script>
-		
     </body>
 </html>
