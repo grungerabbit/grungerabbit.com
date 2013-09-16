@@ -200,6 +200,9 @@ header.splash .tagline span {
 .quote {
   font: 2.5em "BlackoutMidnight";
 }
+.post h2 + p {
+  margin-bottom: 1em;
+}
 * {
   margin: 0;
   padding: 0;
