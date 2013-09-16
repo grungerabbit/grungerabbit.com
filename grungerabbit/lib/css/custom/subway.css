@@ -1,7 +1,17 @@
+::selection {
+  background: #04c4a4;
+  /* Safari */
+
+}
+::-moz-selection {
+  background: #04c4a4;
+  /* Firefox */
+
+}
 body {
   background: #ffffff url("../../img/vignelli.jpg") fixed center center no-repeat;
 }
-.site {
+.container {
   background: rgba(255, 255, 255, 0.95);
 }
 .post-header {
@@ -38,17 +48,18 @@ body {
   margin-left: -0.025em;
 }
 .post-header h3 {
+  padding: 0.1em 0.5em;
   font-family: "LicketySplit";
-  color: black;
-  font-size: 1.75em;
+  color: #04c4a4;
+  font-size: 3.75em;
   text-transform: uppercase;
+  -webkit-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 .post-header .meta {
   float: right;
   margin: 0 1em 1em;
-}
-.post {
-  padding: 0 1em;
 }
 .post li {
   margin: 0 0 1em;
@@ -63,5 +74,8 @@ body {
 @media only screen and (max-width: 50em) {
   .post-header h1 {
     font-size: 5em;
+  }
+  .post-header h3 {
+    font-size: 2.5em;
   }
 }

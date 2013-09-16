@@ -2,10 +2,17 @@
 @import "../../_less/mixins.less";
 @subwayBg : #222;
 
+::selection {
+	background: @grTeal; /* Safari */
+	}
+::-moz-selection {
+	background: @grTeal; /* Firefox */
+}
+
 body {
 	background: #fff url("../../img/vignelli.jpg") fixed center center no-repeat;
 }
-.site {
+.container {
 	background: rgba(255, 255, 255, .95);
 }
 .post-header {
@@ -32,10 +39,15 @@ body {
 		}
 	}
 	h3 {
+		padding: 0.1em 0.5em;
 		font-family: @split;
-		color: black;
-		font-size: 1.75em;
+		color: @grTeal;
+		font-size: 3.75em;
 		text-transform: uppercase;
+	    -webkit-transform: rotate(5deg);
+	    -o-transform: rotate(5deg); 
+	    transform: rotate(5deg);
+
 	}
 	.meta {
 		float: right;
@@ -43,8 +55,6 @@ body {
 	}
 }
 .post {
-	padding: 0 1em;
-	
 	li {
 		margin: 0 0 1em;
 		span {
@@ -61,6 +71,9 @@ body {
 	.post-header {
 		h1 {
 			font-size: 5em;
+		}
+		h3 {
+			font-size: 2.5em;
 		}
 	}
 }
