@@ -286,6 +286,9 @@ header.main nav li:first-child {
   clear: both;
   padding: 2em 0 3em;
 }
+.posts .image-detail {
+  width: 100%;
+}
 .footer {
   margin: 0 auto;
 }

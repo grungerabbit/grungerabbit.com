@@ -1,11 +1,20 @@
-body {
-  background: #ffff00;
+h1.title {
+  font-size: 3em;
+  font-family: "BlackoutTwoAM";
+  color: black;
+  line-height: 1.25em;
+  clear: both;
+  word-wrap: break-word;
 }
-.content .meta {
-  color: #fe0095;
+.post p,
+.meta {
   text-align: right;
 }
-.content .post.title {
-  text-align: center;
-  font-size: 5em;
+.post strong {
+  font-family: "BlackoutSunrise";
+}
+.post h2 {
+  margin: .25em 0;
+  padding: 2em;
+  background: rgba(255, 255, 0, 0.75);
 }

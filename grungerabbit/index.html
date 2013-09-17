@@ -14,12 +14,21 @@ splash: true
 				  <h1 class="where"><a href="{{post.url}}">{{ post.title }}</a></h1>
 				  <span>{{ post.date | date_to_long_string }}</span>
 			</header>
-		  	{% unless post.excerpt %}
+		  	{% if post.showALL %}
 				{{ post.content }}
-			{% endunless%}
+			{% endif %}
 			{% if post.excerpt %}
 				{{post.excerpt}}
 			{% endif %}
-	    {% endfor %}
+			{% if post.image %}
+				<img src="/lib/img/{{ post.image }}" class="image-detail">
+			{% endif %}
+	    
+			{% unless post.showALL %}
+			<p><a href="{{post.url}}">more</a></p>
+			{% endunless %}
+		{% endfor %}
+		
+		
 	</div>
 		
