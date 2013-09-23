@@ -19,6 +19,16 @@ a:active {
 a:hover {
   color: #aa35f6;
 }
+header.main nav:nth-child(1) li {
+  color: #ccc;
+  padding: 0;
+}
+header.main nav:nth-child(1) span.icon-grlogo {
+  font-size: 2.5em;
+}
+.footer.site {
+  display: none;
+}
 nav:nth-child(2) {
   background: #57068c;
   color: #aa35f6;
@@ -55,4 +65,21 @@ nav:nth-child(2) li.full em {
   font-family: "BlackoutTwoAM";
   font-style: normal;
   color: #d396fb;
+}
+strike {
+  color: #cccccc;
+}
+li ul {
+  border-bottom: 1px solid #cccccc;
+}
+li ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+li ul li {
+  list-style: none !important;
+  width: 28%;
+  float: left;
+  line-height: 1;
 }

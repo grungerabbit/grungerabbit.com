@@ -23,10 +23,11 @@ This section will be constantly updated. Let me know if you want any specific to
 
 ####Hacking/Internet
 *	[A Hacker Manifesto][4] McKenzie Wark
-*	in the beginning was the command line
+*	[In the Beginning was the Command Line][5] Neal Stephenson
 
 
 [4]: http://www.amazon.com/A-Hacker-Manifesto-McKenzie-Wark/dp/0674015436
+[5]: http://www.cryptonomicon.com/beginning.html
  
 <br>
  
@@ -52,9 +53,16 @@ This section will be constantly updated. Let me know if you want any specific to
 
 <br>
 
+##Media
+-----
+####Video
+*	[Teaching to See](http://vimeo.com/45232468)
+
+<br>
+
 ##Stuff to help you build
 -----
-####Learn (code)
+####Learn (front-end and other code)
 *	[Codecademy][1]
 
 [1]: http://codecademy,com
@@ -80,7 +88,14 @@ This section will be constantly updated. Let me know if you want any specific to
 ##Other
 ------
 ####Places
+*	[The High Line][1]
+
+[1]: http://www.thehighline.org/
 
 ####Artists
 
-####Cool Designers
+####Designers
+
+####Writers
+
+####Philosophers

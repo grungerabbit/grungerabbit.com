@@ -107,6 +107,9 @@ h5 {
   font-size: 1em;
   font-style: italic;
 }
+ul + h5 {
+  margin-top: .5em;
+}
 p {
   font-size: 100%;
 }

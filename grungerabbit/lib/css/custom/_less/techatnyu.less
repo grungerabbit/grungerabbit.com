@@ -16,8 +16,17 @@ a:link, a:visited, a:active {
 a:hover {
 	color: lighten(@nyu, 30%);
 }
-nav:nth-child(1) {
-	//font-size: 50%;
+header.main nav:nth-child(1) {
+	li {
+		color: #ccc;
+		padding: 0;
+	}
+	span.icon-grlogo {
+		font-size: 2.5em;
+	}
+}
+.footer.site {
+	display: none;
 }
 nav:nth-child(2) {
 	background: @nyu;
@@ -53,4 +62,33 @@ nav:nth-child(2) {
 			}
 		}
 	}
+}
+strike {
+	color: @grayLight;
+}
+li {
+	ul {
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 100%;
+		}
+		border-bottom: 1px solid @grayLight;
+		li {
+			list-style: none !important;
+			width: 28%;
+			float: left;
+			line-height: 1;
+			&:first-child {
+				//background: green;
+			}
+			&:nth-child(2) {
+				//background: yellow;
+			}
+			&:nth-child(3) {
+				//background: blue;
+			}
+		}
+	}
+
 }
