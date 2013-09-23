@@ -1,0 +1,58 @@
+body {
+  background: #eee;
+}
+::selection {
+  background: #444;
+  /* Safari */
+
+}
+::-moz-selection {
+  background: #444;
+  /* Firefox */
+
+}
+a:link,
+a:visited,
+a:active {
+  color: #57068c;
+}
+a:hover {
+  color: #aa35f6;
+}
+nav:nth-child(2) {
+  background: #57068c;
+  color: #aa35f6;
+  text-align: justify;
+  padding: .75em 0 0;
+}
+nav:nth-child(2):after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+nav:nth-child(2) li {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+  padding: 1em;
+}
+nav:nth-child(2) li a:link,
+nav:nth-child(2) li a:visited,
+nav:nth-child(2) li a:active {
+  color: white;
+  padding: 1em 4em;
+  text-decoration: none;
+}
+nav:nth-child(2) li a:hover {
+  color: #aa35f6;
+}
+nav:nth-child(2) li.full {
+  width: 100%;
+}
+nav:nth-child(2) li.full em {
+  display: block;
+  font-size: 4em;
+  font-family: "BlackoutTwoAM";
+  font-style: normal;
+  color: #d396fb;
+}

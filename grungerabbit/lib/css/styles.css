@@ -83,6 +83,14 @@ h5,
 h6 {
   font-weight: normal;
 }
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  line-height: 1.25;
+}
 h1 {
   font-size: 2.5em;
 }
@@ -200,7 +208,20 @@ header.splash .tagline span {
 .quote {
   font: 2.5em "BlackoutMidnight";
 }
+.post {
+  line-height: 1.5;
+}
 .post h2 + p {
+  margin-bottom: 1em;
+}
+.post p {
+  margin-bottom: 0.5em;
+}
+.post li {
+  list-style-type: circle;
+  margin-left: 1.25em;
+}
+.post-header {
   margin-bottom: 1em;
 }
 * {
@@ -235,6 +256,11 @@ body {
 li {
   list-style: none;
 }
+hr {
+  height: .05em;
+  border: none;
+  background: #ccc;
+}
 header.splash .icon-grlogo {
   font-size: 30em;
   position: absolute;
@@ -255,7 +281,7 @@ header.main a .icon-grlogo {
 }
 header.main nav {
   text-align: justify;
-  padding: .5em 0;
+  padding: .5em 0 0;
 }
 header.main nav:after {
   content: '';
@@ -279,7 +305,6 @@ header.main nav li:first-child {
 }
 .posts {
   margin: 0 0 3em;
-  font-size: 1.5em;
 }
 .posts header {
   display: block;
@@ -291,6 +316,7 @@ header.main nav li:first-child {
 }
 .footer {
   margin: 0 auto;
+  margin-top: 2em;
 }
 .footer .contact {
   float: left;
@@ -312,11 +338,16 @@ header.main nav li:first-child {
     left: 50%;
     margin-left: .25em;
   }
+  .post,
+  .post-header,
+  .posts {
+    font-size: 150%;
+  }
 }
 @media only screen and (min-width: 50em) and (max-width: 70em) {
   .site {
-    max-width: 50em;
-    width: 80%;
+    max-width: 45em;
+    width: 75%;
   }
   header.splash .title {
     font-size: 7em;
@@ -325,6 +356,11 @@ header.main nav li:first-child {
     top: 0;
     left: 50%;
     margin-left: 0em;
+  }
+  .post,
+  .post-header,
+  .posts {
+    font-size: 127.5%;
   }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {

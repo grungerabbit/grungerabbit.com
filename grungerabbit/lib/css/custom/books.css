@@ -1,9 +1,6 @@
 body {
   background: #666666;
 }
-.content {
-  font-size: 250%;
-}
 .content .meta {
   color: rgba(255, 255, 0, 0.75);
   text-align: right;
@@ -18,7 +15,7 @@ body {
 .content h3 {
   color: rgba(153, 255, 221, 0.5);
   font-family: "BlackoutTwoAM";
-  font-size: 125%;
+  font-size: 150%;
 }
 .content h6 {
   text-transform: uppercase;
