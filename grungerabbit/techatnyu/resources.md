@@ -64,8 +64,10 @@ This section will be constantly updated. Let me know if you want any specific to
 -----
 ####Learn (front-end and other code)
 *	[Codecademy][1]
+*	[Hack Design][2]
 
 [1]: http://codecademy,com
+[2]: http://hackdesign.org/
 
 #### Help, Sharing, Inspiration
 *	[Github][1]
