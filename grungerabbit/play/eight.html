@@ -14,6 +14,9 @@
 		
 			config: {
 				container: ".wrapper",
+				size: 30,
+				multiplier: 180,
+				
 				people : [
 					{	name: "anders",
 						YOB : 1989,
@@ -68,8 +71,8 @@
 			init: function() {
 				eight.container = $(eight.config.container);
 				paper = Raphael(0, 0, 1500, 1500);
-				size = 40;
-				multiplier = 180;
+				eight.size = eight.config.size;
+				eight.multiplier = eight.config.multiplier;
 				
 				var graph = eight.assignMethods();
 				graph.setup();
@@ -78,54 +81,78 @@
 			assignMethods : function() {
 				function create() {
 					
+					
+					
+					
+					
 					var number = eight.config.people.length;
 					paper.width = paper.width;
 					
+					
+					
+					
+				//	var line = paper.path( ["M", startX, startY, "L", endX, endY ] );
+					//paper.path( ["M", 5, 100, "L", 5, 400 ] ).attr({stroke: "#000"});	
 			 
+			 
+			 	    
 					for (var i = 0; i < number; i++) {
 						
 						var currentPerson = eight.config.people[i];
+						var nextPerson = eight.config.people[i+1];
 						var name = currentPerson.name;
 						
-						var x = currentPerson.x * multiplier;
-						var y = currentPerson.y * multiplier;
+					
+						
+						var curX = currentPerson.x * eight.multiplier;
+						var curY = currentPerson.y * eight.multiplier;
+						//var nextX = nextPerson.x * eight.multiplier;
+						//var nextY = nextPerson.y * eight.multiplier;
 						
 						
+						//"M", currentPerson.x, currentPerson.y, "L", nextPerson.x, nextPerson.y
+						//var c = paper.path(["M", x, 10, "L", 90, 180 ]);
 						
 						if (currentPerson.gender == "F") { 
-					    paper.circle(x+size/2, y+size/2, size/2)
+					    paper.circle(curX+eight.size/2, curY+eight.size/2, eight.size/2)
 					         .attr({fill: "transparent", stroke: "#000"})
 					         .data("name", name)
 					         .hover(function () {
 					            $(".name").text(this.data("name"));
+								test(this);
 					         });
 						 }
-						 else {
-						 	
- 	 					    paper.rect(x, y, size, size)
- 	 					         .attr({fill: "transparent", stroke: "#000"})
- 	 					         .data("name", name)
- 	 					         .hover(function () {
- 	 					             $(".name").text(this.data("name"));
+						else {
+							
+ 	 					   paper.rect(curX, curY, eight.size, eight.size)
+ 	 					        .attr({fill: "transparent", stroke: "#000"})
+ 	 					        .data("name", name)
+ 	 					        .hover(function () {
+ 	 					            $(".name").text(this.data("name"));
 									 test(this);
- 	 					         });
-						 }
+ 	 					        });
+						}
 							
 					}
 					
 					
 					function test(element) {
 						console.log("HIIII");
-						element.attr({fill:"red"})
 					}
 				
 				}
+				
+				
+
+
+
 				
 				
 			
 				return {
 					setup: function() {
 						create();
+						Line();
 						
 					},
 					sortBy: function() {
