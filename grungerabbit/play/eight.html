@@ -78,13 +78,18 @@
 				
 				var graph = eight.assignMethods();
 				graph.setup();
+				
+				$(".duration").click( function() {
+					$("body").css("background", "green");
+				})
+				
 			},
 		
 			assignMethods : function() {
 				function create() {
 					var number = eight.config.people.length;
 					paper.width = paper.width;
-					
+					var moreView = false;
 			 	    
 					for (var i = 0; i < number; i++) {
 						var currentPerson = eight.config.people[i];
@@ -135,33 +140,17 @@
 						
 						
 						
-						//draw vertical line (always skip 2)
 						
+						
+						//draw vertical line (always skip 2)
 						if (i < 4) {
 							var ver = paper.path(["M", curX + center, curY + center*2, "L", nextTwoX + center, nextTwoY])
-							.data("id", "vRel" + i)
-					
+							.data("id", "vRel" + i);
 							
-							function relDurationV() {
-								switch (ver.data("id")) {
-								//b to d
-							  	case "vRel1":
-									ver.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
-							   		break;
-								//d to f
-						  		case "vRel3":
-						  			ver.attr({"stroke-width": 10})
-						  			break;
-								default:
-								  	ver.attr({"stroke-width":1})
-								}	
+							// relationship duration line emphasis
+							if (moreView === true) {
+								relDuration(ver);
 							}
-							
-							
-							
-							relDurationV();
-							
-							
 						}
 					
 					
@@ -169,31 +158,12 @@
 						//draw horizontal line to next opposite gender
 					 	if (i != adj && nextPerson.gender != currentPerson.gender) {
 					 		var hor = paper.path(["M", curX + center*2, curY + center, "L", nextX, nextY + center])
-							.data("id", "hRel" + i)
+							.data("id", "hRel" + i);
 							
-							
-							function relDurationH() {
-								switch (hor.data("id")) {
-								// a to b
-						 		case "hRel0":
-									hor.attr({"stroke-width": 10})
-						    		break;
-								// c to d
-					  			case "hRel2":
-					  				hor.attr({"stroke-width": 10})
-					  			 	break;
-								// e to f
-					  			case "hRel4":
-					  				hor.attr({"stroke-linejoin": "miter", "stroke-dasharray": "- "})
-					  				break;
-			            
-								default:
-								  	hor.attr({"stroke-width":1})
-								}
+							// relationship duration line emphasis
+							if (moreView === true) {
+								relDuration(hor);
 							}
-								
-								
-							relDurationH();
 					 	}
 					
 						
@@ -205,11 +175,35 @@
 					
 					
 					
-					function test(element) {
-						console.log("HIIII");
-					}
-				
 				}
+				
+				
+				function relDuration(path) {
+					switch (path.data("id")) {
+					//b to d
+				  	case "vRel1":
+						path.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
+				   		break;
+					//d to f
+			  		case "vRel3":
+			  			path.attr({"stroke-width": 10})
+			  			break;
+			 		case "hRel0":
+						path.attr({"stroke-width": 10})
+			    		break;
+					// c to d
+		  			case "hRel2":
+		  				path.attr({"stroke-width": 10})
+		  			 	break;
+					// e to f
+		  			case "hRel4":
+		  				path.attr({"stroke-linejoin": "miter", "stroke-dasharray": "- "})
+		  				break;
+					default:
+					  	path.attr({"stroke-width":1})
+					}	
+				};
+				
 				
 				
 
@@ -221,10 +215,9 @@
 				return {
 					setup: function() {
 						create();
-				
 					},
 					sortBy: function() {
-					
+						
 					
 					}
 				
@@ -249,7 +242,8 @@
   <body>
 	  
 	  <div class="name">the person's name!</div>
-	  
+	  <br><br>
+	  <button class="duration">duration</button>
 	  
 
 </body>
