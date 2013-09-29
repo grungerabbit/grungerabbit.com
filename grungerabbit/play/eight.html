@@ -19,43 +19,57 @@
 						YOB : 1989,
 						gender: "M",
 						school: "CU",
+						x: 1,
+						y: 1
 					},
 					{	
 						name: "beth",
 						YOB: 1991,
 						gender: "F",
 						school: "CU",
+						x: 2,
+						y: 1
 					},
 					{	
 						name: "claire",
 						YOB: 1993,
 						gender: "F",
 						school: "NYU",
+						x: 1,
+						y: 2
 					},
 					{	
 						name: "dave",
 						YOB: 1990,
 						gender: "M",
-						school: "New",
+						school: "NYU",
+						x: 2,
+						y: 2
 					},
 					{	
 						name: "eric",
 						YOB: 1987,
 						gender: "M",
-						school: "NYU",
+						school: "New",
+						x: 1,
+						y: 3
 					},
 					{	
 						name: "fiona",
 						YOB: 1991,
 						gender: "F",
 						school: "NYU",
+						x: 2,
+						y: 3
 					},
 				]
 			},
 		
 			init: function() {
 				eight.container = $(eight.config.container);
-				paper = Raphael(10, 50, 500, 500);
+				paper = Raphael(0, 0, 1500, 1500);
+				size = 40;
+				multiplier = 180;
 				
 				var graph = eight.assignMethods();
 				graph.setup();
@@ -64,129 +78,55 @@
 			assignMethods : function() {
 				function create() {
 					
-				
-					
 					var number = eight.config.people.length;
-			
-					
-					
-					
 					paper.width = paper.width;
 					
-							
-
-					
-				
-					console.log(eight.container)
-					
-		     
 			 
 					for (var i = 0; i < number; i++) {
-					    paper.circle(10 + 30 * i, 10, 10)
-					         .attr({fill: "#000"})
-					         .data("i", "name")
-					         .hover(function () {
-					            alert(this.data("i"));
-					         });
-					}
-			 
-			
-					for (var i=0; i<number; i++) {
+						
 						var currentPerson = eight.config.people[i];
 						var name = currentPerson.name;
-					
+						
+						var x = currentPerson.x * multiplier;
+						var y = currentPerson.y * multiplier;
 						
 						
-						gender(30, currentPerson, 100);
-					
-						yearOfBirth(currentPerson)
 						
+						if (currentPerson.gender == "F") { 
+					    paper.circle(x+size/2, y+size/2, size/2)
+					         .attr({fill: "transparent", stroke: "#000"})
+					         .data("name", name)
+					         .hover(function () {
+					            $(".name").text(this.data("name"));
+					         });
+						 }
+						 else {
+						 	
+ 	 					    paper.rect(x, y, size, size)
+ 	 					         .attr({fill: "transparent", stroke: "#000"})
+ 	 					         .data("name", name)
+ 	 					         .hover(function () {
+ 	 					             $(".name").text(this.data("name"));
+									 test(this);
+ 	 					         });
+						 }
+							
 					}
 					
 					
-					
+					function test(element) {
+						console.log("HIIII");
+						element.attr({fill:"red"})
+					}
 				
 				}
 				
 				
-				function gender(size, person, origin) {
-					var i = 100;
-					
-					if (person.gender == "M") {
-						paper.add([
-							{
-								type: "rect",
-						        x: origin,
-						        y: origin,
-						        width: size,
-						        height: size,
-						        fill: "#fc0"
-							}
-						]);
-					
-					}
-					else {
-						paper.add([
-							{
-						        type: "circle",
-						        cx: origin+(size/2),
-						        cy: origin+(size/2),
-						        r: size/2
-							}
-						]);
-						
-					}
-					
-					
-
-					//paper.add([
-					//    {
-					//        type: "circle",
-					//        cx: origin,
-					//        cy: origin,
-					//        r: 5,
-					//		name: "anders",
-					//		YOB : 1989,
-					//		gender: "M",
-					//		school: "CU",
-					//    },
-					//    {
-					//        type: "rect",
-					//        x: 10,
-					//        y: 10,
-					//        width: 10,
-					//        height: 10,
-					//        fill: "#fc0"
-					//    }
-					//]);
-					
-					
-					//function square()
-			
-					
-					// function male() {
-					// 	assign.addClass("m");
-					// };
-					// function female() {
-					// 	circle(person.x, person.y, 15)
-					// };
-					// if (person.gender == "M") {
-					// 	male();
-					// }
-					// else {
-					// 	female();
-					// }
-				}
-			
-				function yearOfBirth(object) {
-				
-		 
-				}
 			
 				return {
 					setup: function() {
 						create();
-						yearOfBirth();
+						
 					},
 					sortBy: function() {
 					
@@ -210,6 +150,10 @@
  
 
   </head>
+  <div class="name">the person's name!</div>
+
+  <body>
+
 </body>
 </html>
 
