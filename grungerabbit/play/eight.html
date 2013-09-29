@@ -146,40 +146,32 @@
 						//draw vertical line (always skip 2)
 						
 						
-							var c = paper.path(["M", curX + center, curY + center, "L", nextTwoX + center, nextTwoY + center])
+							var ver = paper.path(["M", curX + center, curY + center, "L", nextTwoX + center, nextTwoY + center])
 							
 							.data("id", "vRel" + i)
 							
 				
-						
-							console.log(c)
-							console.log(c.data("id"))
+					
 							
 							//"stroke-width": 5, "stroke-linejoin": "miter", "stroke-dasharray": "-"
 							
-							switch (c.data("id")) {
-						 	case "vRel0":
-						   	 	console.log("heeey");
-								c.attr({"stroke-width": 5, "stroke-linejoin": "miter", "stroke-dasharray": "-"})
-						    	break;
+							console.log(ver.data("id"))
+							
+							switch (ver.data("id")) {
+							//b to d
 						  	case "vRel1":
-						    	console.log("hiiiii");
+								ver.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
 						   		break;
-					  		case "vRel2":
-					  		  	console.log("heeey");
-					  			c.attr({"stroke-width": 1})
-					  		 	break;
+							//d to f
 					  		case "vRel3":
-					  			console.log("hiiiii");
+					  			ver.attr({"stroke-width": 10})
 					  			break;
-					  		case "vRel4":
-					  			console.log("hiiiii");
-					  			break;
-					  		case "vRel5":
-					  			console.log("hiiiii");
-					  			break;
+							//broken, hack
+							case "vRel4":
+								ver.attr({"stroke": "transparent"})
+								break;
 							default:
-							  	c.attr({"stroke-width":1})
+							  	ver.attr({"stroke-width":1})
 							}
 							
 							
@@ -194,35 +186,27 @@
 						
 						//draw horizontal line to next opposite gender
 					 	if (nextPerson.gender && nextPerson.gender != currentPerson.gender) {
-					 		var d = paper.path(["M", curX + center, curY + center, "L", nextX + center, nextY + center])
+					 		var hor = paper.path(["M", curX + center, curY + center, "L", nextX + center, nextY + center])
 							.data("id", "hRel" + i)
 							
-							console.log(c.data("id"))
 							
-							//	switch (c.data("id")) {
-						 	//	case "hRel0":
-						   	//	 	console.log("heeey");
-							//		c.attr({"stroke-width": 5})
-						    //		break;
-						  	//	case "hRel1":
-						    //		console.log("hiiiii");
-						   	//		break;
-					  		//	case "hRel2":
-					  		//	  	console.log("heeey");
-					  		//		c.attr({"stroke-width": 5})
-					  		//	 	break;
-					  		//	case "hRel3":
-					  		//		console.log("hiiiii");
-					  		//		break;
-					  		//	case "hRel4":
-					  		//		console.log("hiiiii");
-					  		//		break;
-					  		//	case "hRel5":
-					  		//		console.log("hiiiii");
-					  		//		break;
-							//	default:
-							//	  	c.attr({"stroke-width":1})
-							//	}
+								switch (hor.data("id")) {
+								// a to b
+						 		case "hRel0":
+									hor.attr({"stroke-width": 10})
+						    		break;
+								// c to d
+					  			case "hRel2":
+					  				hor.attr({"stroke-width": 10})
+					  			 	break;
+								// e to f
+					  			case "hRel4":
+					  				hor.attr({"stroke-linejoin": "miter", "stroke-dasharray": "- "})
+					  				break;
+			            
+								default:
+								  	hor.attr({"stroke-width":1})
+								}
 					 	}
 					
 						
