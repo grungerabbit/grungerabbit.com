@@ -101,14 +101,17 @@
 						var currentPerson = eight.config.people[i];
 						var nextPerson = eight.config.people[i+1];
 						var name = currentPerson.name;
-						
 					
+						var adj = number - 1;
 						
 						var curX = currentPerson.x * eight.multiplier;
 						var curY = currentPerson.y * eight.multiplier;
-						//var nextX = nextPerson.x * eight.multiplier;
-						//var nextY = nextPerson.y * eight.multiplier;
 						
+						// except for the last person
+						if (i !== adj ) {
+							var nextX = nextPerson.x * eight.multiplier;
+							var nextY = nextPerson.y * eight.multiplier;
+						}
 						
 						//"M", currentPerson.x, currentPerson.y, "L", nextPerson.x, nextPerson.y
 						//var c = paper.path(["M", x, 10, "L", 90, 180 ]);
@@ -120,8 +123,16 @@
 					         .hover(function () {
 					            $(".name").text(this.data("name"));
 								test(this);
+								
+								
 					         });
+							 
+							 console.log(curX)
+						 paper.path(["M", curX, curY, "L", nextX, nextY])
 						 }
+					
+						
+						 
 						else {
 							
  	 					   paper.rect(curX, curY, eight.size, eight.size)
@@ -131,6 +142,8 @@
  	 					            $(".name").text(this.data("name"));
 									 test(this);
  	 					        });
+								
+							 paper.path(["M", curX, curY, "L", nextX, nextY])
 						}
 							
 					}
@@ -152,8 +165,7 @@
 				return {
 					setup: function() {
 						create();
-						Line();
-						
+				
 					},
 					sortBy: function() {
 					
