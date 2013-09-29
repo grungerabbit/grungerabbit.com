@@ -5,11 +5,6 @@
 
 <html>
   <head>
-
-
-
-
-
 	<script>
 	(function($) {
 		var eight = {
@@ -71,6 +66,8 @@
 			},
 		
 			init: function() {
+				vertical = [];
+				horizon = [];
 				eight.container = $(eight.config.container);
 				paper = Raphael(50, 50, 1500, 1500);
 				eight.size = eight.config.size;
@@ -80,8 +77,6 @@
 				graph.setup();
 				
 				$(".duration").click( function() {
-					$("body").css("background", "green");
-					
 					graph.sortBy();
 				})
 				
@@ -146,18 +141,8 @@
 						
 						//draw vertical line (always skip 2)
 						if (i < 4) {
-							var ver = paper.path(["M", curX + center, curY + center*2, "L", nextTwoX + center, nextTwoY])
-							.data("id", "vRel" + i);
-							
-							// relationship duration line emphasis
-						
-							//$("body").click( function() {
-								relDuration(ver);
-								//});
-								
-							
-						
-							
+							vertical.push( paper.path(["M", curX + center, curY + center*2, "L", nextTwoX + center, nextTwoY])
+							.data("id", "vRel" + i) );
 						}
 						
 			
@@ -165,28 +150,40 @@
 					
 						
 						//draw horizontal line to next opposite gender
-					 	if (i != adj && nextPerson.gender != currentPerson.gender) {
-					 		var hor = paper.path(["M", curX + center*2, curY + center, "L", nextX, nextY + center])
-							.data("id", "hRel" + i);
-							
-							// relationship duration line emphasis
-				
-							//$("body").click( function() {
-								relDuration(hor);
-								
-								
-							
-							
-							
-					 	}
-					
-					
-						function toggleView() {
-							//	console.log("YOUUU");
-							//	relDuration(hor);
-							//	relDuration(ver)
-					
+						
+						if (i !== adj) {
+						 	if (nextPerson.gender !== currentPerson.gender) {
+						 		horizon.push( paper.path(["M", curX + center*2, curY + center, "L", nextX, nextY + center])
+								.data("id", "hRel" + i) );
+							}
+							// account for empty spaces in array
+							else {
+								horizon.push(null);
+							}
 						}
+					 	
+							
+					
+						
+						
+					
+						//initDura()
+							
+							
+						//	
+						//	console.log(horizontal[i].data("id"))
+						//	
+						//	// relationship duration line emphasis
+						//
+						//
+						//	//relDuration(horizontal[i]);
+						//	
+						//		
+						//	
+						//	
+						
+					
+						
 						
 				
 						
@@ -194,13 +191,7 @@
 					}
 					
 					
-					return {
-						
-						test : function() {
-							toggleView();
-						}
-						
-					}
+					
 					
 					
 					
@@ -208,33 +199,43 @@
 				
 				
 				function relDuration(path) {
-					switch (path.data("id")) {
-					//b to d
-				  	case "vRel1":
-						path.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
-				   		break;
-					//d to f
-			  		case "vRel3":
-			  			path.attr({"stroke-width": 10})
-			  			break;
-			 		case "hRel0":
-						path.attr({"stroke-width": 10})
-			    		break;
-					// c to d
-		  			case "hRel2":
-		  				path.attr({"stroke-width": 10})
-		  			 	break;
-					// e to f
-		  			case "hRel4":
-		  				path.attr({"stroke-linejoin": "miter", "stroke-dasharray": "- "})
-		  				break;
-					default:
-					  	path.attr({"stroke-width":1})
-					}	
+					if (path) {
+						switch (path.data("id")) {
+						//b to d
+					  	case "vRel1":
+							path.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
+					   		break;
+						//d to f
+				  		case "vRel3":
+				  			path.attr({"stroke-width": 10})
+				  			break;
+				 		case "hRel0":
+							path.attr({"stroke-width": 10})
+				    		break;
+						// c to d
+			  			case "hRel2":
+			  				path.attr({"stroke-width": 10})
+			  			 	break;
+						// e to f
+			  			case "hRel4":
+			  				path.attr({"stroke-linejoin": "miter", "stroke-dasharray": "- "})
+			  				break;
+						default:
+						  	path.attr({"stroke-width":1})
+						}
+					}
+						
 				};
 				
 				
-
+				function initDura() {
+					var number = eight.config.people.length;
+				
+					for (var i = 0; i < number; i++) {
+						relDuration(horizon[i]);
+						relDuration(vertical[i]);
+					}
+				};
 
 
 				
@@ -245,7 +246,7 @@
 						create();
 					},
 					sortBy: function() {
-						test.toggleView();
+						initDura();
 					
 					}
 				
