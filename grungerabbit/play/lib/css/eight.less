@@ -1,16 +1,58 @@
 * {
 	padding: 0;
 	margin: 0;
+	font-family: 'Playfair Display', serif;
 }
 header {
 	position: absolute;
-	background: #cc00ff;
+	background: black;
 	width: 100%;
 	padding: 5px;
 	z-index: 100;
+	a {
+		color: #aaa;
+		text-decoration: none;
+		margin-right: 10px;
+		&:hover {
+			border-bottom: 1px dotted #aaa;
+		}
+	}
 }
 button {
 	width: 100px;
 	padding: 10px;
 }
-
+.title {
+	position: absolute;
+	z-index: 150;
+	right: 15%;
+	border-left: 1px dashed black;
+	height: 100%;
+	padding-left: 100px;
+}
+h1 {
+	margin: 50px auto 15px;
+	text-align: right;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 3em;
+}
+h3 {
+	font-weight: normal;
+	span {
+		font-size: .75em;
+	}
+}
+.cute {
+	position: absolute;
+	right: 15%;
+	text-align: right;
+	top: 190px;
+	width: 200px;
+	line-height: 1.25;
+	strong {
+		display: block;
+		font-weight: 900;
+		font-style: italic;
+	}
+}

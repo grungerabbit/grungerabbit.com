@@ -5,7 +5,7 @@
 
 <html>
   <head>
-
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900italic' rel='stylesheet' type='text/css'>
 	  
 	  
 	<script>
@@ -74,7 +74,7 @@
 				woman = [];
 				man = [];
 				eight.container = $(eight.config.container);
-				paper = Raphael(250, 50, 900, 900);
+				paper = Raphael(120, 80, 850, 400);
 				eight.size = eight.config.size;
 				eight.multiplier = eight.config.multiplier;
 				
@@ -261,34 +261,34 @@
 				}
 				
 				function legend() {
-					var legendX = 500;
-					var legendY = 200;
-					var endX = 670;
+					var legendX = 570;
+					var legendY = 230;
+					var endX = 750;
 					
 				
 					
 					
-					var key = paper.rect(legendX, legendY, 200, 155).attr({"stroke": "#aaa"});
+					var key = paper.rect(legendX, legendY, 200, 155).attr({"stroke": "#888"});
 					
 					var yearLine = paper.path(["M", legendX + 75, legendY + 25, "L", endX, legendY + 25])
-						.attr({"stroke": "#aaa", "stroke-width": 10});
+						.attr({"stroke": "#888", "stroke-width": 10});
 					var year = paper.text(legendX + 35, legendY + 25, "~1 Year")
-						.attr({"fill": "#aaa"});
+						.attr({"fill": "#888"});
 					
 					var monthLine = paper.path(["M", legendX + 75, legendY + 60, "L", endX, legendY + 60])
-						.attr({"stroke": "#aaa", "stroke-width": 1});
+						.attr({"stroke": "#888", "stroke-width": 1});
 					var month = paper.text(legendX + 35, legendY + 60, "~1 Month")
-						.attr({"fill": "#aaa"});
+						.attr({"fill": "#888"});
 					
 					var weekLine = paper.path(["M", legendX + 75, legendY + 95, "L", endX, legendY + 95])
-						.attr({"stroke": "#aaa", "stroke-linejoin": "miter", "stroke-dasharray": "- "});
+						.attr({"stroke": "#888", "stroke-linejoin": "miter", "stroke-dasharray": "- "});
 					var week = paper.text(legendX + 35, legendY + 95, "~1 Week")
-						.attr({"fill": "#aaa"});
+						.attr({"fill": "#888"});
 					
 					var dayLine = paper.path(["M", legendX + 75, legendY + 130, "L", endX, legendY + 130])
-						.attr({"stroke": "#aaa", "stroke-linejoin": "round", "stroke-dasharray": ". "});
+						.attr({"stroke": "#888", "stroke-linejoin": "round", "stroke-dasharray": ". "});
 					var day = paper.text(legendX + 35, legendY + 130, "~1 Day")
-						.attr({"fill": "#aaa"});
+						.attr({"fill": "#888"});
 					
 					
 				}
@@ -472,7 +472,14 @@
 		<a class="school" href="#">school</a>
 		<a class="SOTU" href="#">state of the union</a>
 	  </header>
-
+	  
+	  <div class="title">
+	  
+	  	<h1>eight</h1>
+		<h3>a new york city love story, told in raphael.js <span>v1.0</span></h3><br>
+	</div>
+	
+	<p class="cute"><strong>7</strong> romances <strong>6</strong> 20-somethings <strong>5</strong> relationships <strong>4</strong> estrangements <strong>3</strong> universities <strong>2</strong> years <strong>1</strong> city</p>
 </body>
 </html>
 
