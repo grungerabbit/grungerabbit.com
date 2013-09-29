@@ -389,12 +389,16 @@
 							reset(horizon[i]);
 							reset(vertical[i]);
 							
+							resetSchool(woman[i]);
+							resetSchool(man[i]);
+		
+							
 						}
 						
 					}
 				};
 				
-				function SOTU(path) {
+				function SOTU(path, element) {
 					if (path) {
 						switch (path.data("id")) {
 						//b to d
@@ -441,9 +445,15 @@
 				function reset(path) {
 					if (path) {
 		  				path.attr({stroke: "black", "stroke-width": 1, "stroke-dasharray": ""})
-						
-					}	
+					}
 				}
+				function resetSchool(element) {			 
+					if (element != null) {
+						
+							element.attr({fill: "white"});
+					
+					}
+				};
 			
 				return {
 					setup: function() {
