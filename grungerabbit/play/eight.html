@@ -385,6 +385,11 @@
 							SOTU(horizon[i]);
 							SOTU(vertical[i]);
 						}
+						else {
+							reset(horizon[i]);
+							reset(vertical[i]);
+							
+						}
 						
 					}
 				};
@@ -432,6 +437,13 @@
 					}	
 				}
 
+
+				function reset(path) {
+					if (path) {
+		  				path.attr({stroke: "black", "stroke-width": 1, "stroke-dasharray": ""})
+						
+					}	
+				}
 			
 				return {
 					setup: function() {
@@ -471,6 +483,7 @@
 		<a class="duration" href="#">duration</a>
 		<a class="school" href="#">school</a>
 		<a class="SOTU" href="#">state of the union</a>
+		<a class="reset" href="#">reset</a>
 	  </header>
 	  
 	  <div class="title">
