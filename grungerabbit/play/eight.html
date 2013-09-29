@@ -81,6 +81,8 @@
 				
 				$(".duration").click( function() {
 					$("body").css("background", "green");
+					
+					graph.sortBy();
 				})
 				
 			},
@@ -148,10 +150,17 @@
 							.data("id", "vRel" + i);
 							
 							// relationship duration line emphasis
-							if (moreView === true) {
+						
+							//$("body").click( function() {
 								relDuration(ver);
-							}
+								//});
+								
+							
+						
+							
 						}
+						
+			
 					
 					
 						
@@ -161,17 +170,37 @@
 							.data("id", "hRel" + i);
 							
 							// relationship duration line emphasis
-							if (moreView === true) {
+				
+							//$("body").click( function() {
 								relDuration(hor);
-							}
+								
+								
+							
+							
+							
 					 	}
 					
+					
+						function toggleView() {
+							//	console.log("YOUUU");
+							//	relDuration(hor);
+							//	relDuration(ver)
+					
+						}
+						
+				
 						
 							
 					}
 					
 					
-					
+					return {
+						
+						test : function() {
+							toggleView();
+						}
+						
+					}
 					
 					
 					
@@ -205,7 +234,6 @@
 				};
 				
 				
-				
 
 
 
@@ -217,7 +245,7 @@
 						create();
 					},
 					sortBy: function() {
-						
+						test.toggleView();
 					
 					}
 				
