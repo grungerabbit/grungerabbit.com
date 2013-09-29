@@ -22,7 +22,6 @@
 				
 				people : [
 					{	name: "anders",
-						YOB : 1989,
 						gender: "M",
 						school: "CU",
 						x: 1,
@@ -30,7 +29,6 @@
 					},
 					{	
 						name: "beth",
-						YOB: 1991,
 						gender: "F",
 						school: "CU",
 						x: 2,
@@ -38,23 +36,20 @@
 					},
 					{	
 						name: "claire",
-						YOB: 1993,
 						gender: "F",
 						school: "NYU",
 						x: 1,
 						y: 2
 					},
 					{	
-						name: "dave",
-						YOB: 1990,
+						name: "daniel",
 						gender: "M",
 						school: "NYU",
 						x: 2,
 						y: 2
 					},
 					{	
-						name: "eric",
-						YOB: 1987,
+						name: "everett",
 						gender: "M",
 						school: "New",
 						x: 1,
@@ -62,7 +57,6 @@
 					},
 					{	
 						name: "fiona",
-						YOB: 1991,
 						gender: "F",
 						school: "NYU",
 						x: 2,
@@ -84,11 +78,11 @@
 				var graph = eight.assignMethods();
 				graph.setup();
 				
-				$("a").click( function() {
+				$("a").click( function(e) {
+					e.preventDefault();
 					var graph = eight.assignMethods($(this).attr("class"));
 					graph.sortBy();
 				})
-				
 			},
 		
 			assignMethods : function(trigger) {
@@ -104,6 +98,7 @@
 						var name = currentPerson.name;
 						var school = currentPerson.school;
 					
+						// account for 0
 						var adj = number - 1;
 						var adj2 = adj - 1; 
 						
@@ -124,67 +119,34 @@
 						
 						var center = eight.size/2;
 						
+						
+						// define women
 						if (currentPerson.gender == "F") { 
 					    woman.push( paper.circle(curX+eight.size/2, curY+eight.size/2, eight.size/2)
-					         .attr({fill: "none", stroke: "#000"})
+					         .attr({fill: "white", stroke: "#000"})
 					         .data({"name": name, "school": school})
 					         .hover(function () {
 					            $(".name").text(this.data("name"));
-								//test(this);	
 					         }) );
 						 }
 						 else {
 							 woman.push(null);
 						 }
 						 
-						 if (woman[i] != null) {
-						 //	console.log(woman[i].data("school"));
-							
-							if (woman[i].data("school") == "NYU") {
-								woman[i].attr({fill: eight.config.color.nyu});
-							}
-							else if (woman[i].data("school") == "CU") {
-								woman[i].attr({fill: eight.config.color.cu});
-							}
-							
-						 }
-						 	
 						 
-						
-						
-						
-						
-						
-						
+						 // define men
+						if (currentPerson.gender == "M") {
+ 	 					 man.push( paper.rect(curX, curY, eight.size, eight.size)
+ 	 					 	.attr({fill: "none", stroke: "#000"})
+ 	 					 	.data({"name": name, "school": school})
+ 	 					 	.hover(function () {
+ 	 					 	    $(".name").text(this.data("name"));
+ 	 					 	}) );
+						}
+				 		else {
+				 			 man.push(null);
+				 		}
 
-					if (currentPerson.gender == "M") {
- 	 				 man.push( paper.rect(curX, curY, eight.size, eight.size)
- 	 				        .attr({fill: "none", stroke: "#000"})
- 	 				        .data({"name": name, "school": school})
- 	 				        .hover(function () {
- 	 				            $(".name").text(this.data("name"));
-								 //test(this);
- 	 				        }) );
-					}
-				 	else {
-				 		 man.push(null);
-				 	}
-					if (man[i] != null) {
-						console.log(man[i]);
-						
-						if (man[i].data("school") == "NYU") {
-							man[i].attr({fill: eight.config.color.nyu});
-						}
-						else if (man[i].data("school") == "CU") {
-							man[i].attr({fill: eight.config.color.cu});
-						}
-						else {
-							man[i].attr({fill: eight.config.color.new});
-						}
-					}
-				 
-					
-					
 					
 						
 						//draw vertical line (always skip 2)
@@ -262,10 +224,19 @@
 					}	
 				};
 				
-				function setSchool(element) {
-					
-					
-				}
+				function setSchool(element) {			 
+					if (element != null) {
+						if (element.data("school") == "NYU") {
+							element.attr({fill: eight.config.color.nyu});
+						}
+						else if (element.data("school") == "CU") {
+							element.attr({fill: eight.config.color.cu});
+						}
+						else {
+							element.attr({fill: eight.config.color.new});
+						}
+					}
+				};
 				
 				
 				function sortPaths() {
@@ -282,7 +253,10 @@
 							relOKC(horizon[i]);
 							relOKC(vertical[i]);
 						}
-						
+						else if (trigger == "school") {
+							setSchool(woman[i]);
+							setSchool(man[i]);
+						}
 						
 						
 					}
@@ -321,7 +295,7 @@
 	  	<div class="name">the person's name!</div>
 	  	<a class="okcupid" href="#">okCupid</a>
 		<a class="duration" href="#">duration</a>
-		
+		<a class="school" href="#">school</a>
 	  </header>
 
 </body>
