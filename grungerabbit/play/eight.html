@@ -134,10 +134,7 @@
 									 //test(this);
  	 					        });
 						}
-						
-						
-						
-						
+					
 						
 						//draw vertical line (always skip 2)
 						if (i < 4) {
@@ -145,12 +142,7 @@
 							.data("id", "vRel" + i) );
 						}
 						
-			
-					
-					
-						
 						//draw horizontal line to next opposite gender
-						
 						if (i !== adj) {
 						 	if (nextPerson.gender !== currentPerson.gender) {
 						 		horizon.push( paper.path(["M", curX + center*2, curY + center, "L", nextX, nextY + center])
@@ -160,42 +152,9 @@
 							else {
 								horizon.push(null);
 							}
-						}
-					 	
-							
-					
-						
-						
-					
-						//initDura()
-							
-							
-						//	
-						//	console.log(horizontal[i].data("id"))
-						//	
-						//	// relationship duration line emphasis
-						//
-						//
-						//	//relDuration(horizontal[i]);
-						//	
-						//		
-						//	
-						//	
-						
-					
-						
-						
-				
-						
-							
+						}	
 					}
-					
-					
-					
-					
-					
-					
-				}
+				};
 				
 				
 				function relDuration(path) {
@@ -223,8 +182,7 @@
 						default:
 						  	path.attr({"stroke-width":1})
 						}
-					}
-						
+					}	
 				};
 				
 				
@@ -237,9 +195,6 @@
 					}
 				};
 
-
-				
-				
 			
 				return {
 					setup: function() {
@@ -270,10 +225,10 @@
 
   <body>
 	  
-	  <div class="name">the person's name!</div>
-	  <br><br>
-	  <button class="duration">duration</button>
-	  
+	  <header>
+	  	<div class="name">the person's name!</div>
+	  	<button class="duration">duration</button>
+	  </header>
 
 </body>
 </html>
