@@ -132,7 +132,7 @@
 						
 						
 					
-						var topVertexY = 30;
+					//	var topVertexY = 30;
 					
 				
 					//var there;
@@ -165,24 +165,7 @@
 					         .hover(function () {
 					            $(".name").text(this.data("name"));
 					         })
-							 .click(function() {
-								 var there;
-								 console.log("CLICKED")
-	 						    var clr = Raphael.hsb(Math.random(), .6, 1);
-	 						    this.animate(there ? {
-	 						        cx: 15,
-	 						        cy: 15,
-	 						        r: 15,
-	 						        stroke: "#fff",
-	 						        fill: "#fff"
-	 						    } : {
-	 						        cx: 80,
-	 						        cy: 80,
-	 						        r: 15,
-	 						        stroke: clr,
-	 						        fill: clr
-	 						    }, 600, ["bounce", "<>", "elastic", ""][1000]);
-							 })
+							 
 						 
 						  );
 						 }
@@ -190,6 +173,31 @@
 							 woman.push(null);
 						 }
 						 
+						 
+						
+						//if (woman[i] !== null) {
+						//	console.log(woman[i] + i + woman[i].data("name"))
+						//	
+						//	woman[1].click(function() {
+						//		 var there;
+						//		 console.log("CLICKED")
+ 						//	    var clr = Raphael.hsb(Math.random(), .6, 1);
+ 						//	    this.animate(there ? {
+ 						//	        cx: 15,
+ 						//	        cy: 15,
+ 						//	        r: 15,
+ 						//	        stroke: "#fff",
+ 						//	        fill: "#fff"
+ 						//	    } : {
+ 						//	        cx: 50, //curX+eight.size/2
+ 						//	        cy: 90,
+ 						//	        r: eight.size/2,
+ 						//	        stroke: clr,
+ 						//	        fill: clr
+ 						//	    }, 600, ["bounce", "<>", "elastic", ""][1000]);
+						//	 })
+						//}
+
 						
 						 
 						 
@@ -373,14 +381,55 @@
 							setSchool(woman[i]);
 							setSchool(man[i]);
 						}
-						
+						else if (trigger == "SOTU") {
+							SOTU(horizon[i]);
+							SOTU(vertical[i]);
+						}
 						
 					}
 				};
 				
-				function SOTU() {
-					
-					
+				function SOTU(path) {
+					if (path) {
+						switch (path.data("id")) {
+						//b to d
+					  	case "vRel1":
+							path.attr({stroke: "#666", "stroke-width": 2, "stroke-linejoin": "miter", "stroke-dasharray": "-.."})
+							
+					   		break;
+						//c to e
+					  	case "vRel2":
+					  		path.attr({stroke: "green", "stroke-width": 2})
+							var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 230, 295, 50, 50)
+					  		break;
+						//a to c
+				  		case "vRel0":
+				  			path.attr({stroke: "green", "stroke-width": 2, "stroke-linejoin": "miter", "stroke-dasharray": "-.."})
+							var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 230, 175, 50, 50)
+				  			break;
+						//d to f
+					  	case "vRel3":
+					  		path.attr({stroke: "#666", "stroke-width": 10, "stroke-linejoin": "miter", "stroke-dasharray": "."})
+					  		
+							break;
+						// a to b
+				  		case "hRel0":
+				  			path.attr({stroke: "#666", "stroke-width": 10, "stroke-linejoin": "miter", "stroke-dasharray": "."});
+							var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 170, 115, 50, 50)
+				  		 	break;
+						// c to d
+			  			case "hRel2":
+			  				path.attr({stroke: "#666", "stroke-width": 10, "stroke-linejoin": "miter", "stroke-dasharray": "."})
+							var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 170, 230, 50, 50)
+			  			 	break;
+						// e to f
+			  			case "hRel4":
+			  				path.attr({stroke: "#666", "stroke-width": 2, "stroke-linejoin": "miter", "stroke-dasharray": "-.."})
+			  				break;
+						default:
+						  	path.attr({stroke: "black"})
+						}
+					}	
 				}
 
 			
@@ -388,7 +437,7 @@
 					setup: function() {
 						create();
 						legend();
-						test();
+					//	test();
 					},
 					sortBy: function() {
 						sortPaths();
@@ -417,10 +466,11 @@
   <body>
 	  
 	  <header>
-	  	<div class="name">the person's name!</div>
+	  <!--	<div class="name">the person's name!</div>-->
 	  	<a class="okcupid" href="#">okCupid</a>
 		<a class="duration" href="#">duration</a>
 		<a class="school" href="#">school</a>
+		<a class="SOTU" href="#">state of the union</a>
 	  </header>
 
 </body>
