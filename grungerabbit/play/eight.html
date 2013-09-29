@@ -132,11 +132,31 @@
 						
 						
 					
+						var topVertexY = 30;
+					
+				
+					//var there;
+					//paper.circle(15, topVertexY, 15).attr("fill", "green").click(function () {
+					//    var clr = Raphael.hsb(Math.random(), .6, 1);
+					//    this.animate(there ? {
+					//        cx: 15,
+					//        cy: 15,
+					//        r: 15,
+					//        stroke: "#fff",
+					//        fill: "#fff"
+					//    } : {
+					//        cx: 80,
+					//        cy: 80,
+					//        r: 15,
+					//        stroke: clr,
+					//        fill: clr
+					//    }, 600, ["bounce", "<>", "elastic", ""][1000]);
+					//    //there = !there;
+					//});
+					//
 						
 						
-						
-						
-						
+					
 						// define women
 						if (currentPerson.gender == "F") { 
 					    woman.push( paper.circle(curX+eight.size/2, curY+eight.size/2, eight.size/2)
@@ -144,7 +164,27 @@
 					         .data({"name": name, "school": school})
 					         .hover(function () {
 					            $(".name").text(this.data("name"));
-					         }) );
+					         })
+							 .click(function() {
+								 var there;
+								 console.log("CLICKED")
+	 						    var clr = Raphael.hsb(Math.random(), .6, 1);
+	 						    this.animate(there ? {
+	 						        cx: 15,
+	 						        cy: 15,
+	 						        r: 15,
+	 						        stroke: "#fff",
+	 						        fill: "#fff"
+	 						    } : {
+	 						        cx: 80,
+	 						        cy: 80,
+	 						        r: 15,
+	 						        stroke: clr,
+	 						        fill: clr
+	 						    }, 600, ["bounce", "<>", "elastic", ""][1000]);
+							 })
+						 
+						  );
 						 }
 						 else {
 							 woman.push(null);
@@ -189,27 +229,27 @@
 				};
 				
 				function test(r) {
-					console.log("hiiiii")
+					var topVertexY = 30;
 					
 				
-					        var there;
-					        paper.circle(15, 15, 10).attr("fill", "green").click(function () {
-					            var clr = Raphael.hsb(Math.random(), .6, 1);
-					            this.animate(there ? {
-					                cx: 15,
-					                cy: 15,
-					                r: 10,
-					                stroke: "#fff",
-					                fill: "#fff"
-					            } : {
-					                cx: 80,
-					                cy: 80,
-					                r: 15,
-					                stroke: clr,
-					                fill: clr
-					            }, 600, ["bounce", "<>", "elastic", ""][1000]);
-					            //there = !there;
-					        });
+					var there;
+					paper.circle(15, topVertexY, 15).attr("fill", "green").click(function () {
+					    var clr = Raphael.hsb(Math.random(), .6, 1);
+					    this.animate(there ? {
+					        cx: 15,
+					        cy: 15,
+					        r: 15,
+					        stroke: "#fff",
+					        fill: "#fff"
+					    } : {
+					        cx: 80,
+					        cy: 80,
+					        r: 15,
+					        stroke: clr,
+					        fill: clr
+					    }, 600, ["bounce", "<>", "elastic", ""][1000]);
+					    //there = !there;
+					});
 				}
 				
 				function legend() {
