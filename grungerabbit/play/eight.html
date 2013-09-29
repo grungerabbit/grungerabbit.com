@@ -14,6 +14,12 @@
 				size: 30,
 				multiplier: 120,
 				
+				color: {
+					nyu: "#57068c",
+					cu: "#c4d8e2",
+					new: "#FF1300"
+				},
+				
 				people : [
 					{	name: "anders",
 						YOB : 1989,
@@ -68,6 +74,8 @@
 			init: function() {
 				vertical = [];
 				horizon = [];
+				woman = [];
+				man = [];
 				eight.container = $(eight.config.container);
 				paper = Raphael(50, 50, 1500, 1500);
 				eight.size = eight.config.size;
@@ -76,13 +84,14 @@
 				var graph = eight.assignMethods();
 				graph.setup();
 				
-				$(".duration").click( function() {
+				$("a").click( function() {
+					var graph = eight.assignMethods($(this).attr("class"));
 					graph.sortBy();
 				})
 				
 			},
 		
-			assignMethods : function() {
+			assignMethods : function(trigger) {
 				function create() {
 					var number = eight.config.people.length;
 					paper.width = paper.width;
@@ -93,6 +102,7 @@
 						var nextPerson = eight.config.people[i+1];
 						var nextTwo = eight.config.people[i+2];
 						var name = currentPerson.name;
+						var school = currentPerson.school;
 					
 						var adj = number - 1;
 						var adj2 = adj - 1; 
@@ -115,25 +125,66 @@
 						var center = eight.size/2;
 						
 						if (currentPerson.gender == "F") { 
-					    paper.circle(curX+eight.size/2, curY+eight.size/2, eight.size/2)
-					         .attr({fill: "transparent", stroke: "#000"})
-					         .data("name", name)
+					    woman.push( paper.circle(curX+eight.size/2, curY+eight.size/2, eight.size/2)
+					         .attr({fill: "none", stroke: "#000"})
+					         .data({"name": name, "school": school})
 					         .hover(function () {
 					            $(".name").text(this.data("name"));
 								//test(this);	
-					         });
+					         }) );
 						 }
-					
+						 else {
+							 woman.push(null);
+						 }
+						 
+						 if (woman[i] != null) {
+						 //	console.log(woman[i].data("school"));
+							
+							if (woman[i].data("school") == "NYU") {
+								woman[i].attr({fill: eight.config.color.nyu});
+							}
+							else if (woman[i].data("school") == "CU") {
+								woman[i].attr({fill: eight.config.color.cu});
+							}
+							
+						 }
+						 	
+						 
+						
+						
+						
+						
+						
+						
 
-						else {
- 	 					   paper.rect(curX, curY, eight.size, eight.size)
- 	 					        .attr({fill: "transparent", stroke: "#000"})
- 	 					        .data("name", name)
- 	 					        .hover(function () {
- 	 					            $(".name").text(this.data("name"));
-									 //test(this);
- 	 					        });
+					if (currentPerson.gender == "M") {
+ 	 				 man.push( paper.rect(curX, curY, eight.size, eight.size)
+ 	 				        .attr({fill: "none", stroke: "#000"})
+ 	 				        .data({"name": name, "school": school})
+ 	 				        .hover(function () {
+ 	 				            $(".name").text(this.data("name"));
+								 //test(this);
+ 	 				        }) );
+					}
+				 	else {
+				 		 man.push(null);
+				 	}
+					if (man[i] != null) {
+						console.log(man[i]);
+						
+						if (man[i].data("school") == "NYU") {
+							man[i].attr({fill: eight.config.color.nyu});
 						}
+						else if (man[i].data("school") == "CU") {
+							man[i].attr({fill: eight.config.color.cu});
+						}
+						else {
+							man[i].attr({fill: eight.config.color.new});
+						}
+					}
+				 
+					
+					
 					
 						
 						//draw vertical line (always skip 2)
@@ -168,6 +219,7 @@
 				  		case "vRel3":
 				  			path.attr({"stroke-width": 10})
 				  			break;
+						// a to b
 				 		case "hRel0":
 							path.attr({"stroke-width": 10})
 				    		break;
@@ -185,13 +237,54 @@
 					}	
 				};
 				
+				function relOKC(path) {
+					if (path) {
+						switch (path.data("id")) {
+						//b to d
+					  	case "vRel1":
+							path.attr({stroke: "red"})
+					   		break;
+						//d to f
+				  		case "vRel0":
+				  			path.attr({stroke: "red"})
+				  			break;
+						// c to d
+			  			case "hRel2":
+			  				path.attr({stroke: "red"})
+			  			 	break;
+						// e to f
+			  			case "hRel4":
+			  				path.attr({stroke: "red"})
+			  				break;
+						default:
+						  	path.attr({stroke: "black"})
+						}
+					}	
+				};
 				
-				function initDura() {
+				function setSchool(element) {
+					
+					
+				}
+				
+				
+				function sortPaths() {
 					var number = eight.config.people.length;
 				
 					for (var i = 0; i < number; i++) {
-						relDuration(horizon[i]);
-						relDuration(vertical[i]);
+						
+						
+						if (trigger == "duration") {
+							relDuration(horizon[i]);
+							relDuration(vertical[i]);
+						}
+						else if (trigger == "okcupid") {
+							relOKC(horizon[i]);
+							relOKC(vertical[i]);
+						}
+						
+						
+						
 					}
 				};
 
@@ -201,8 +294,7 @@
 						create();
 					},
 					sortBy: function() {
-						initDura();
-					
+						sortPaths();
 					}
 				
 				
@@ -227,7 +319,9 @@
 	  
 	  <header>
 	  	<div class="name">the person's name!</div>
-	  	<button class="duration">duration</button>
+	  	<a class="okcupid" href="#">okCupid</a>
+		<a class="duration" href="#">duration</a>
+		
 	  </header>
 
 </body>
