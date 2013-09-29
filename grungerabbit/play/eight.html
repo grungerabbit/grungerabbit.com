@@ -5,23 +5,10 @@
 
 <html>
   <head>
-    <title>Canvas tutorial</title>
- 
- 
+
 	<script>
 	(function($) {
-	
-	
-		function draw() {
-		  var ctx = document.getElementById('canvas').getContext('2d');
 
-		  ctx.fillStyle = "rgb(200,0,0)";
-		  ctx.fillRect (10, 10, 55, 50);
-
-		  ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-		  ctx.fillRect (30, 30, 55, 50);
-		}
-	
 	
 		var eight = {
 		
@@ -37,114 +24,163 @@
 						name: "beth",
 						YOB: 1991,
 						gender: "F",
-						school: "CU"
+						school: "CU",
 					},
 					{	
 						name: "claire",
 						YOB: 1993,
 						gender: "F",
-						school: "NYU"
+						school: "NYU",
 					},
 					{	
 						name: "dave",
 						YOB: 1990,
 						gender: "M",
-						school: "New"
+						school: "New",
 					},
 					{	
 						name: "eric",
 						YOB: 1987,
 						gender: "M",
-						school: "NYU"
+						school: "NYU",
 					},
 					{	
 						name: "fiona",
 						YOB: 1991,
 						gender: "F",
-						school: "NYU"
+						school: "NYU",
 					},
 				]
 			},
 		
 			init: function() {
 				eight.container = $(eight.config.container);
-
+				paper = Raphael(10, 50, 500, 500);
+				
 				var graph = eight.assignMethods();
 				graph.setup();
 			},
 		
 			assignMethods : function() {
 				function create() {
+					
+				
+					
 					var number = eight.config.people.length;
 			
-			
-			
-			
-			
-			
-			
+					
+					
+					
+					paper.width = paper.width;
+					
+							
+
+					
+				
 					console.log(eight.container)
 					
-					
-					
-					
-	 
-		          var canvas = document.getElementById('tutorial');
-		          if (canvas.getContext){
-		          		var ctx = canvas.getContext('2d');
-						// This is a hack to clean the canvas
-				 	   	canvas.width = canvas.width;
-				  
-		  				ctx.lineWidth = 5;
-	  
-		  		  	  	//square
-						ctx.strokeRect (40, 40, 30, 30);
-	  				  	
-		  		  	
-				  		ctx.arc(125,55,15,0,Math.PI*2,true);
-						
-						
-
-		  		  	  	ctx.stroke();
+		     
+			 
+					for (var i = 0; i < number; i++) {
+					    paper.circle(10 + 30 * i, 10, 10)
+					         .attr({fill: "#000"})
+					         .data("i", "name")
+					         .hover(function () {
+					            alert(this.data("i"));
+					         });
+					}
+			 
 			
 					for (var i=0; i<number; i++) {
 						var currentPerson = eight.config.people[i];
 						var name = currentPerson.name;
 					
-						eight.container.append("<div class='person' "+ name +">"+ name + "</div>")
-					
-						var newDiv = $("div").last();
-			
-						gender(newDiv, currentPerson);
+						
+						
+						gender(30, currentPerson, 100);
 					
 						yearOfBirth(currentPerson)
-					
+						
 					}
+					
+					
+					
 				
 				}
-				function gender(assign, object) {
-					function male() {
-						assign.addClass("m");
-					};
-					function female() {
-						assign.addClass("f");
-					};
-					if (object.gender == "M") {
-						male();
+				
+				
+				function gender(size, person, origin) {
+					var i = 100;
+					
+					if (person.gender == "M") {
+						paper.add([
+							{
+								type: "rect",
+						        x: origin,
+						        y: origin,
+						        width: size,
+						        height: size,
+						        fill: "#fc0"
+							}
+						]);
+					
 					}
 					else {
-						female();
+						paper.add([
+							{
+						        type: "circle",
+						        cx: origin+(size/2),
+						        cy: origin+(size/2),
+						        r: size/2
+							}
+						]);
+						
 					}
+					
+					
+
+					//paper.add([
+					//    {
+					//        type: "circle",
+					//        cx: origin,
+					//        cy: origin,
+					//        r: 5,
+					//		name: "anders",
+					//		YOB : 1989,
+					//		gender: "M",
+					//		school: "CU",
+					//    },
+					//    {
+					//        type: "rect",
+					//        x: 10,
+					//        y: 10,
+					//        width: 10,
+					//        height: 10,
+					//        fill: "#fc0"
+					//    }
+					//]);
+					
+					
+					//function square()
+			
+					
+					// function male() {
+					// 	assign.addClass("m");
+					// };
+					// function female() {
+					// 	circle(person.x, person.y, 15)
+					// };
+					// if (person.gender == "M") {
+					// 	male();
+					// }
+					// else {
+					// 	female();
+					// }
 				}
 			
 				function yearOfBirth(object) {
 				
 		 
-		  
-				  }
-		       
-				
-				
 				}
 			
 				return {
@@ -174,9 +210,7 @@
  
 
   </head>
-
-    <canvas id="tutorial" width="500" height="500"></canvas>
-  </body>
+</body>
 </html>
 
 
