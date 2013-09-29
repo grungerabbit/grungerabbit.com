@@ -12,14 +12,12 @@
 
 	<script>
 	(function($) {
-
-	
 		var eight = {
 		
 			config: {
 				container: ".wrapper",
-				size: 50,
-				multiplier: 280,
+				size: 30,
+				multiplier: 120,
 				
 				people : [
 					{	name: "anders",
@@ -74,7 +72,7 @@
 		
 			init: function() {
 				eight.container = $(eight.config.container);
-				paper = Raphael(0, 0, 1500, 1500);
+				paper = Raphael(50, 50, 1500, 1500);
 				eight.size = eight.config.size;
 				eight.multiplier = eight.config.multiplier;
 				
@@ -84,9 +82,6 @@
 		
 			assignMethods : function() {
 				function create() {
-					
-				
-					
 					var number = eight.config.people.length;
 					paper.width = paper.width;
 					
@@ -123,44 +118,50 @@
 					         .data("name", name)
 					         .hover(function () {
 					            $(".name").text(this.data("name"));
-								test(this);
-								
-								
+								//test(this);	
 					         });
 						 }
 					
-						 
-						
-						 
+
 						else {
-							
  	 					   paper.rect(curX, curY, eight.size, eight.size)
  	 					        .attr({fill: "transparent", stroke: "#000"})
  	 					        .data("name", name)
  	 					        .hover(function () {
  	 					            $(".name").text(this.data("name"));
-									 test(this);
+									 //test(this);
  	 					        });
 						}
+						
+						
 						
 						//draw vertical line (always skip 2)
 						
 						if (i < 4) {
 							var ver = paper.path(["M", curX + center, curY + center*2, "L", nextTwoX + center, nextTwoY])
 							.data("id", "vRel" + i)
+					
 							
-							switch (ver.data("id")) {
-							//b to d
-						  	case "vRel1":
-								ver.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
-						   		break;
-							//d to f
-					  		case "vRel3":
-					  			ver.attr({"stroke-width": 10})
-					  			break;
-							default:
-							  	ver.attr({"stroke-width":1})
-							}	
+							function relDurationV() {
+								switch (ver.data("id")) {
+								//b to d
+							  	case "vRel1":
+									ver.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
+							   		break;
+								//d to f
+						  		case "vRel3":
+						  			ver.attr({"stroke-width": 10})
+						  			break;
+								default:
+								  	ver.attr({"stroke-width":1})
+								}	
+							}
+							
+							
+							
+							relDurationV();
+							
+							
 						}
 					
 					
@@ -171,6 +172,7 @@
 							.data("id", "hRel" + i)
 							
 							
+							function relDurationH() {
 								switch (hor.data("id")) {
 								// a to b
 						 		case "hRel0":
@@ -188,6 +190,10 @@
 								default:
 								  	hor.attr({"stroke-width":1})
 								}
+							}
+								
+								
+							relDurationH();
 					 	}
 					
 						
