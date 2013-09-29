@@ -1,0 +1,182 @@
+<script src="/lib/js/jquery.js"></script>
+<script src="/lib/js/raphael.js"></script>
+<link rel="stylesheet" href="lib/css/eight.css">
+
+
+<html>
+  <head>
+    <title>Canvas tutorial</title>
+ 
+ 
+	<script>
+	(function($) {
+	
+	
+		function draw() {
+		  var ctx = document.getElementById('canvas').getContext('2d');
+
+		  ctx.fillStyle = "rgb(200,0,0)";
+		  ctx.fillRect (10, 10, 55, 50);
+
+		  ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+		  ctx.fillRect (30, 30, 55, 50);
+		}
+	
+	
+		var eight = {
+		
+			config: {
+				container: ".wrapper",
+				people : [
+					{	name: "anders",
+						YOB : 1989,
+						gender: "M",
+						school: "CU",
+					},
+					{	
+						name: "beth",
+						YOB: 1991,
+						gender: "F",
+						school: "CU"
+					},
+					{	
+						name: "claire",
+						YOB: 1993,
+						gender: "F",
+						school: "NYU"
+					},
+					{	
+						name: "dave",
+						YOB: 1990,
+						gender: "M",
+						school: "New"
+					},
+					{	
+						name: "eric",
+						YOB: 1987,
+						gender: "M",
+						school: "NYU"
+					},
+					{	
+						name: "fiona",
+						YOB: 1991,
+						gender: "F",
+						school: "NYU"
+					},
+				]
+			},
+		
+			init: function() {
+				eight.container = $(eight.config.container);
+
+				var graph = eight.assignMethods();
+				graph.setup();
+			},
+		
+			assignMethods : function() {
+				function create() {
+					var number = eight.config.people.length;
+			
+			
+			
+			
+			
+			
+			
+					console.log(eight.container)
+					
+					
+					
+					
+	 
+		          var canvas = document.getElementById('tutorial');
+		          if (canvas.getContext){
+		          		var ctx = canvas.getContext('2d');
+						// This is a hack to clean the canvas
+				 	   	canvas.width = canvas.width;
+				  
+		  				ctx.lineWidth = 5;
+	  
+		  		  	  	//square
+						ctx.strokeRect (40, 40, 30, 30);
+	  				  	
+		  		  	
+				  		ctx.arc(125,55,15,0,Math.PI*2,true);
+						
+						
+
+		  		  	  	ctx.stroke();
+			
+					for (var i=0; i<number; i++) {
+						var currentPerson = eight.config.people[i];
+						var name = currentPerson.name;
+					
+						eight.container.append("<div class='person' "+ name +">"+ name + "</div>")
+					
+						var newDiv = $("div").last();
+			
+						gender(newDiv, currentPerson);
+					
+						yearOfBirth(currentPerson)
+					
+					}
+				
+				}
+				function gender(assign, object) {
+					function male() {
+						assign.addClass("m");
+					};
+					function female() {
+						assign.addClass("f");
+					};
+					if (object.gender == "M") {
+						male();
+					}
+					else {
+						female();
+					}
+				}
+			
+				function yearOfBirth(object) {
+				
+		 
+		  
+				  }
+		       
+				
+				
+				}
+			
+				return {
+					setup: function() {
+						create();
+						yearOfBirth();
+					},
+					sortBy: function() {
+					
+					
+					}
+				
+				
+				}
+			}
+		}
+	
+		$(document).ready( function() {
+			eight.init();
+		});
+
+	
+	})(jQuery);
+
+	</script>
+ 
+ 
+
+  </head>
+
+    <canvas id="tutorial" width="500" height="500"></canvas>
+  </body>
+</html>
+
+
