@@ -71,7 +71,7 @@
 				woman = [];
 				man = [];
 				eight.container = $(eight.config.container);
-				paper = Raphael(50, 50, 1500, 1500);
+				paper = Raphael(250, 50, 900, 900);
 				eight.size = eight.config.size;
 				eight.multiplier = eight.config.multiplier;
 				
@@ -169,13 +169,45 @@
 					}
 				};
 				
+				function legend() {
+					var legendX = 500;
+					var legendY = 200;
+					var endX = 670;
+					
+				
+					
+					
+					var key = paper.rect(legendX, legendY, 200, 155).attr({"stroke": "#aaa"});
+					
+					var yearLine = paper.path(["M", legendX + 75, legendY + 25, "L", endX, legendY + 25])
+						.attr({"stroke": "#aaa", "stroke-width": 10});
+					var year = paper.text(legendX + 35, legendY + 25, "~1 Year")
+						.attr({"fill": "#aaa"});
+					
+					var monthLine = paper.path(["M", legendX + 75, legendY + 60, "L", endX, legendY + 60])
+						.attr({"stroke": "#aaa", "stroke-width": 1});
+					var month = paper.text(legendX + 35, legendY + 60, "~1 Month")
+						.attr({"fill": "#aaa"});
+					
+					var weekLine = paper.path(["M", legendX + 75, legendY + 95, "L", endX, legendY + 95])
+						.attr({"stroke": "#aaa", "stroke-linejoin": "miter", "stroke-dasharray": "- "});
+					var week = paper.text(legendX + 35, legendY + 95, "~1 Week")
+						.attr({"fill": "#aaa"});
+					
+					var dayLine = paper.path(["M", legendX + 75, legendY + 130, "L", endX, legendY + 130])
+						.attr({"stroke": "#aaa", "stroke-linejoin": "round", "stroke-dasharray": ". "});
+					var day = paper.text(legendX + 35, legendY + 130, "~1 Day")
+						.attr({"fill": "#aaa"});
+					
+				}
+				
 				
 				function relDuration(path) {
 					if (path) {
 						switch (path.data("id")) {
 						//b to d
 					  	case "vRel1":
-							path.attr({"stroke-linejoin": "miter", "stroke-dasharray": ". "})
+							path.attr({"stroke-linejoin": "round", "stroke-dasharray": ". "})
 					   		break;
 						//d to f
 				  		case "vRel3":
@@ -261,16 +293,24 @@
 						
 					}
 				};
+				
+				function SOTU() {
+					
+					
+				}
 
 			
 				return {
 					setup: function() {
 						create();
+						legend();
 					},
 					sortBy: function() {
 						sortPaths();
+					},
+					current: function() {
+						SOTU();
 					}
-				
 				
 				}
 			}
