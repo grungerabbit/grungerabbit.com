@@ -5,6 +5,9 @@
 
 <html>
   <head>
+
+	  
+	  
 	<script>
 	(function($) {
 		var eight = {
@@ -90,6 +93,10 @@
 					var number = eight.config.people.length;
 					paper.width = paper.width;
 					var moreView = false;
+					
+					
+			
+					
 			 	    
 					for (var i = 0; i < number; i++) {
 						var currentPerson = eight.config.people[i];
@@ -117,7 +124,17 @@
 						}
 						
 						
+						
+						
+						
 						var center = eight.size/2;
+						
+						
+						
+					
+						
+						
+						
 						
 						
 						// define women
@@ -132,6 +149,8 @@
 						 else {
 							 woman.push(null);
 						 }
+						 
+						
 						 
 						 
 						 // define men
@@ -169,6 +188,30 @@
 					}
 				};
 				
+				function test(r) {
+					console.log("hiiiii")
+					
+				
+					        var there;
+					        paper.circle(15, 15, 10).attr("fill", "green").click(function () {
+					            var clr = Raphael.hsb(Math.random(), .6, 1);
+					            this.animate(there ? {
+					                cx: 15,
+					                cy: 15,
+					                r: 10,
+					                stroke: "#fff",
+					                fill: "#fff"
+					            } : {
+					                cx: 80,
+					                cy: 80,
+					                r: 15,
+					                stroke: clr,
+					                fill: clr
+					            }, 600, ["bounce", "<>", "elastic", ""][1000]);
+					            //there = !there;
+					        });
+				}
+				
 				function legend() {
 					var legendX = 500;
 					var legendY = 200;
@@ -198,6 +241,7 @@
 						.attr({"stroke": "#aaa", "stroke-linejoin": "round", "stroke-dasharray": ". "});
 					var day = paper.text(legendX + 35, legendY + 130, "~1 Day")
 						.attr({"fill": "#aaa"});
+					
 					
 				}
 				
@@ -304,6 +348,7 @@
 					setup: function() {
 						create();
 						legend();
+						test();
 					},
 					sortBy: function() {
 						sortPaths();
