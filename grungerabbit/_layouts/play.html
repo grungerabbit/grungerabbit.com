@@ -6,11 +6,7 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/lib/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/lib/css/styles.css">
+		<title>grungerabbit</title>
 		<meta name="description" content="perhaps a silly girl, but definitely not just ink on a milk cart." />
 		<meta name="keywords" content="grungerabbit grunge rabbit cheryl wu cheryl jane wu westfield nj nyc ny nyu new york university gallatin kurdt koebane greedytrees art graphic design illustration gallery portfolio commissions awesome sparkle fairy princess" />
 		
@@ -29,29 +25,24 @@
 		</script>
 		
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-		
-		{% if page.css %}
-			<link rel="stylesheet" href="/lib/css/custom/{{page.css}}">
+	
+	
+		{% if page.extracss %}
+			{{ page.extracss }}
 		{% endif %}
     </head>
     <body>
 
-        <div class="container">
-			{% unless page.splash %}
-				{% include header.html %}
-			{% endunless %}
-			{% if page.splash %}
-				{% include splash.html %}
-			{% endif %}
-			
+
 			
 			   {{ content }}
 			
-			{% include footer.html %}
-        </div> <!-- /container -->
 
 		<script src="/lib/js/jquery.js"></script>
 		<script src="/lib/js/jquery.lettering.js"></script>
-		<script src="/lib/js/app.js"></script>
+		
+		{% if page.extrajs %}
+			{{ page.extrajs }}
+		{% endif %}
     </body>
 </html>
