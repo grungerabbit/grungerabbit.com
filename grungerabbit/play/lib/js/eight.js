@@ -347,12 +347,12 @@
 					//c to e
 				  	case "vRel2":
 				  		path.attr({stroke: "green", "stroke-width": 2})
-						var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 230, 295, 50, 50)
+						var c = paper.image("lib/img/explosion.gif", 230, 295, 50, 50)
 				  		break;
 					//a to c
 			  		case "vRel0":
 			  			path.attr({stroke: "green", "stroke-width": 2, "stroke-linejoin": "miter", "stroke-dasharray": "-.."})
-						var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 230, 175, 50, 50)
+						var c = paper.image("lib/img/explosion.gif", 230, 175, 50, 50)
 			  			break;
 					//d to f
 				  	case "vRel3":
@@ -362,12 +362,12 @@
 					// a to b
 			  		case "hRel0":
 			  			path.attr({stroke: "#666", "stroke-width": 10, "stroke-linejoin": "miter", "stroke-dasharray": "."});
-						var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 170, 115, 50, 50)
+						var c = paper.image("lib/img/explosion.gif", 170, 115, 50, 50)
 			  		 	break;
 					// c to d
 		  			case "hRel2":
 		  				path.attr({stroke: "#666", "stroke-width": 10, "stroke-linejoin": "miter", "stroke-dasharray": "."})
-						var c = paper.image("http://webtools.gieskes.nl/pages/images/explosion.gif", 170, 230, 50, 50)
+						var c = paper.image("lib/img/explosion.gif", 170, 230, 50, 50)
 		  			 	break;
 					// e to f
 		  			case "hRel4":

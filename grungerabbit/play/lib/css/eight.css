@@ -56,3 +56,9 @@ h3 span {
   font-weight: 900;
   font-style: italic;
 }
+.hackNY {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+}
