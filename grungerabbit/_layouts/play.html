@@ -6,7 +6,10 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-		<title>grungerabbit</title>
+		{% if page.maincss == true %}
+		    <link rel="stylesheet" href="/lib/css/styles.css">
+		{% endif %}
+
 		<meta name="description" content="perhaps a silly girl, but definitely not just ink on a milk cart." />
 		<meta name="keywords" content="grungerabbit grunge rabbit cheryl wu cheryl jane wu westfield nj nyc ny nyu new york university gallatin kurdt koebane greedytrees art graphic design illustration gallery portfolio commissions awesome sparkle fairy princess" />
 		
@@ -33,10 +36,15 @@
     </head>
     <body>
 
-
+		{% if page.maincss == true %}
+		    <div class="site content">
+		{% endif %}
 			
 			   {{ content }}
 			
+	   	{% if page.maincss == true %}
+	   	   	</div>
+	   	{% endif %}	
 
 		<script src="/lib/js/jquery.js"></script>
 		<script src="/lib/js/jquery.lettering.js"></script>
