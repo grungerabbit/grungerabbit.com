@@ -208,8 +208,8 @@ header.splash .tagline span {
 .posts p {
   text-align: right;
 }
-.quote {
-  font: 2.5em "BlackoutMidnight";
+.post-header {
+  margin-bottom: 1em;
 }
 .post {
   line-height: 1.5;
@@ -224,8 +224,8 @@ header.splash .tagline span {
   list-style-type: circle;
   margin-left: 1.25em;
 }
-.post-header {
-  margin-bottom: 1em;
+.quote {
+  font: 2.5em "BlackoutMidnight";
 }
 * {
   margin: 0;
