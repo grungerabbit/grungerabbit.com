@@ -1,0 +1,349 @@
+---
+layout: play
+title: subway svg time
+extracss: <link href="lib/css/ratings.css" media="all" rel="stylesheet" type="text/css" />
+extrajs: <script src="lib/js/ratings/mustache.js"></script>	<script src="lib/js/ratings/output.js"></script> <script src="lib/js/ratings/rating.js"></script>	
+---
+<style>
+* {
+  margin: 0;
+	padding: 0;
+}
+body {
+	background: rgb(100, 200, 240);
+}
+</style>
+
+
+<svg xmlns='http://www.w3.org/2000/svg'
+      width="2000px" height="2000px" version="1.1">
+	  
+	  <defs>
+	    <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+	      <path d="M 8 0 L 0 0 0 8" fill="none" stroke="gray" stroke-width="0.5"/>
+	    </pattern>
+	    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+	      <rect width="80" height="80" fill="url(#smallGrid)"/>
+	      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1"/>
+	    </pattern>
+	  </defs>
+
+	  <rect width="100%" height="100%" fill="url(#grid)" />
+<style>
+
+.map > .landform {
+	fill: rgba(230, 230, 200, .7);
+}
+.park {
+	fill: rgb(130, 200, 180);
+}
+.grid > line {
+	stroke: white;
+	stroke-width: 3;
+}
+
+.grid > line.park-av {
+	stroke: blue;
+	stroke-dasharray: 5;
+}
+.stop {
+	stroke-width: 2; 
+	fill: rgba(1, 1, 1, .85); 
+	stroke: rgba(255, 255, 255, .85);
+}
+.stop.hub {
+	stroke-width: 2; 
+	fill: rgba(255, 255, 255, .85); 
+	stroke: rgba(1, 1, 1, .85);
+}
+.stop-label {
+	font: 16 "Helvetica";
+	font-weight: bold;
+	//letter-spacing: -1;
+}
+.stop-label > .train {
+	font-size: 14;
+}
+.access {
+	fill: blue;
+}
+
+.line, .grid > line.helper {
+	stroke: #f40f7c; /*temp*/
+}
+.line {
+	stroke-width: 7;
+	fill: transparent;
+}
+.lexington.line {
+	stroke: #00933C;
+}
+.sixth.line {
+	stroke: #FF6319;
+}
+.seventh.line {
+	stroke: #EE352E;
+}
+.eighth.line {
+	stroke: #2850AD;
+}
+.canarsie.line {
+	stroke: #808183;
+}
+.flushing.line {
+	stroke: #B933AD;
+}
+.broadway.line {
+	stroke: #FCCC0A;
+}
+.shuttle.line {
+	stroke: #808183;
+}
+.crosstown.line {
+	stroke: #6CBE45;
+}
+.nassau.line {
+	stroke: #996633;
+}
+
+
+
+
+/*.grid > line.v6th-av {
+	stroke: purple;
+}*/
+</style>
+
+<g class="map">
+	<!-- crude manhattan, but it'll do for now d="M 50 50 h 1000 v 2000 h -1000 Z -->
+
+
+	<polygon class="landform" id="manhattan" points="50,0 1100,0 1100,1500 550,1500 50,400" />
+
+	<rect class="park" id="central-park" width="500" height="200" x="300" />
+
+   
+
+	<g class="grid streets">
+
+	<!-- 66th -->
+	<line class="h66th-st" x1="50" y1="115" x2="1100" y2="115" />
+
+
+	<!-- 59th -->
+	<line class="h59th-st" x1="50" y1="200" x2="1100" y2="200" />
+
+	<!-- 53rd -->
+	<line class="h50rd-st" x1="140" y1="255" x2="1100" y2="255" />
+
+	<!-- 50th -->
+	<line class="h50th-st" x1="50" y1="290" x2="1100" y2="290" />
+
+	<!-- 42nd -->
+	<line class="h42th-st helper" x1="50" y1="355" x2="1100" y2="355" />
+
+	<!-- 34th -->
+	<line class="h34th-st" x1="60" y1="420" x2="1100" y2="420" />
+
+	<!-- 23rd -->
+	<line class="h23th-st" x1="103" y1="515" x2="1100" y2="515" />
+
+	<!-- 14th -->
+	<line class="h14th-st " x1="140" y1="595" x2="1100" y2="595" />
+	
+	<!-- 8th -->
+	<line class="h8th-st" x1="650" y1="645" x2="1100" y2="645" />
+	
+	
+	</g>
+
+
+	<g class="grid avenues">
+
+	<!-- WE / 11th -->
+	<line class="v11th-av" x1="140" y1="0" x2="140" y2="595" />
+
+	<!-- 10th -->
+	<line class="v10th-av" x1="185" y1="0" x2="185" y2="595" />	
+
+	<!-- Columbus/9th -->
+	<line class="v9th-av" x1="220" y1="0" x2="220" y2="595" />
+
+	<!-- CPW / 8th -->
+	<line class="v8th-av helper" x1="300" y1="0" x2="300" y2="670" />
+
+	<!-- 7th -->
+	<line class="v7th-av" x1="480" y1="200" x2="480" y2="670" />
+
+	<!-- 6th -->
+	<line class="v6th-av" x1="650" y1="200" x2="650" y2="700" />
+
+	<!-- 5th -->
+	<line class="v5th-av" x1="800" y1="0" x2="800" y2="670" />
+
+	<!-- Mad -->
+	<line class="madison-av" x1="840" y1="0" x2="840" y2="670" />
+
+	<!-- Park -->
+	<line class="park-av" x1="880" y1="0" x2="880" y2="430" />
+
+	<!-- Lex -->
+	<line class="lex-av" x1="920" y1="0" x2="920" y2="355" />
+
+	<!-- 3rd -->
+	<line class="v3rd-av" x1="975" y1="0" x2="975" y2="670" />
+
+	<!-- 2nd -->
+	<line class="v2nd-av" x1="1030" y1="0" x2="1030" y2="670" />
+	</g>
+</g>
+ 
+
+<g class="all-lines">
+
+		<!-- ~~~~~~~~~~~~ main line LEXINGTON 4 5 6 ~~~~~~~~~~ -->
+		<path class="lexington line" d="M 920 0 v 275 s 0 40, -10 80 s -25 50, -25 75 s -3 30, 10 170 s 18 100, 15 200" />
+
+		<!-- ~~~~~~~~~~~~ main line SIXTH B D F M ~~~~~~~~~~ -->
+		<path class="sixth line" d="M650 200 v 480 s 10,120 90,120 s 10,0 290,0" />
+		<path class="sixth line" d="M300 245 h 400" />
+		
+		<!-- ~~~~~~~~~~~~ main line CANARSIE L ~~~~~~~~~~ -->
+		<path class="canarsie line" d="M300 595 h 1000" />
+		
+		<!-- ~~~~~~~~~~~~ main line FLUSHING 7 ~~~~~~~~~~ -->
+		<path class="flushing line" d="M480 355 h 1000" />
+		
+		<!-- ~~~~~~~~~~~~ main line SHUTTLE S ~~~~~~~~~~ -->
+		<path class="shuttle line" d="M480 347 h 435" />
+		
+		<!-- ~~~~~~~~~~~~ main line SEVENTH 1 2 3 ~~~~~~~~~~ -->
+		<path class="seventh line" d="M480 350 v 480 s 10,120 90,120 s 10,0 290,0" />
+		
+		<!-- ~~~~~~~~~~~~ main line EIGHTH A C E ~~~~~~~~~~ -->
+		<path class="eighth line" d="M300 200 v 400" />
+		<path class="eighth line" d="M300 255 h 400" />
+		
+</g>
+
+
+<g class="all-stops">
+	<g class="lexington">
+		<!-- ~~~~~~~~~~~~ main line LEXINGTON 4 5 6 ~~~~~~~~~~ -->
+		<g id="68th">
+			<circle class="stop 68th-lex" r="5" cx="920" cy="100" />
+
+			<text class="stop-label" x="930" y="90">68 St 
+			<tspan dy="15" x="930">Hunter College</tspan>
+			<tspan class="train" dy="15" x="930">6</tspan>
+			</text>
+		</g>
+
+		<g id="59th">
+			<circle class="stop hub" r="5" cx="920" cy="200" />
+
+			<text class="stop-label" x="930" y="210">59 St
+			<tspan class="train" dy="15" x="930">4&bull;5&bull;6</tspan>
+			</text>
+		</g>
+
+		<g id="51st">
+			<circle class="stop" r="5" cx="920" cy="275" />
+
+			<text class="stop-label" x="930" y="285">51 St
+			<tspan class="train" dy="15" x="930">6 <tspan class="access">&</tspan></tspan>
+			</text>
+		</g>
+
+		<g id="42nd grand-central">
+			<circle class="stop hub" r="10" cx="910" cy="351" />
+
+			<text class="stop-label" x="920" y="373">Grand Central
+			<tspan dy="15" x="920">42 St <tspan class="access">O [& except S]</tspan></tspan>
+			<tspan class="train" dy="15" x="920">S&bull;4&bull;5&bull;6&bull;7&bull;Metro-North</tspan>
+			</text>
+		</g>
+
+		<g id="33rd">
+			<circle class="stop" r="5" cx="885" cy="430" />
+
+			<text class="stop-label" x="895" y="435">33 St
+			<tspan class="train" dy="15" x="895">6</tspan>
+			</text>
+		</g>
+
+		<g id="28th">
+			<circle class="stop" r="5" cx="885" cy="470" />
+
+			<text class="stop-label" x="895" y="475">28 St
+			<tspan class="train" dy="15" x="895">6</tspan>
+			</text>
+		</g>
+
+		<g id="23rd">
+			<circle class="stop" r="5" cx="887" cy="515" />
+
+			<text class="stop-label" x="895" y="525">23 St
+			<tspan class="train" dy="15" x="895">6</tspan>
+			</text>
+		</g>
+
+		<g id="14th union-square">
+			<rect class="stop hub" height="10" width="25" rx="5" x="875" y="590" />
+
+			<text class="stop-label" x="910" y="605" transform="rotate(320 920 600)">14 St-Union Sq
+			<tspan class="train" dy="15" dx="-100">L&bull;N&bull;Q&bull;R&bull;4&bull;5&bull;6 <tspan class="access">#</tspan></tspan>
+			<tspan class="access" dy="15" dx="-85">L&bull;N&bull;Q&bull;R &</tspan>
+			</text>
+		</g>
+
+		<g id="astor">
+			<circle class="stop" r="5" cx="900" cy="650" />
+
+			<text class="stop-label" x="910" y="645">Astor Pl
+			<tspan class="train" dy="15" x="910">6</tspan>
+			</text>
+		</g>
+	</g>
+	
+	
+	<g class="sixth">
+		<!-- ~~~~~~~~~~~~ main line SIXTH B D F M ~~~~~~~~~~ -->
+		<g id="west4">
+			<circle class="stop hub" r="7" cx="650" cy="705" />
+
+			<text class="stop-label" x="660" y="700">W 4 St
+			<tspan dy="15" x="665">Wash Sq <tspan class="access">&</tspan></tspan>
+			<tspan class="train" dy="15" x="680">A&bull;B&bull;C&bull;D&bull;E&bull;F&bull;M</tspan>
+			</text>
+		</g>
+	</g>
+	
+</g>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</svg>
+
+</body>
+</html>

@@ -227,6 +227,9 @@ header.splash .tagline span {
 .quote {
   font: 2.5em "BlackoutMidnight";
 }
+.colophon {
+  font-size: .75em;
+}
 * {
   margin: 0;
   padding: 0;
@@ -316,6 +319,12 @@ header.main nav li:first-child {
 }
 .posts .image-detail {
   width: 100%;
+}
+.post img {
+  text-align: center;
+  margin: auto;
+  clear: both;
+  max-width: 100%;
 }
 .footer {
   margin: 0 auto;

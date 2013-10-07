@@ -1,0 +1,181 @@
+@size: 300px;
+@triangle: @size/4;
+@corner: #e3156b;
+
+body {
+    font: .875em 'helvetica';
+	//background: red;
+}
+.container {
+	width: 100%;
+	margin: auto;
+}
+.right, .pull-right {
+    float: right;
+}
+.left, .pull-left {
+	float: left;
+}
+
+.square(@size) {
+	width: @size;
+	height: @size;
+}
+
+
+
+.reviews {
+	opacity: 1;
+	&:hover {
+		opacity: 1;
+	}
+	position: relative;
+	.square(@size);
+	background: rgb(130, 130, 130);
+	padding: 1em;
+	margin: .5em;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+	float: left;
+	
+	h2 {
+		margin: 0 0 1em 0;
+	    font-size: 2.25em; 
+		line-height: 1.2em;  
+	}
+	h5 {
+	    font-size: 1.25em;
+	    font-weight: normal;
+	    font-style: italic;
+		&.right {
+			position: absolute;
+			right: 1em;
+			bottom: 4.35em;
+		}
+	}
+
+	em, a {
+		position: absolute;
+		right: 1em;
+		bottom: 3.5em;
+	}
+	
+	.price, .rating, .info { position: absolute; }
+	
+	.price {
+	    width: 0;
+	    border-top: @triangle solid @corner;
+	    border-left: @triangle solid transparent;
+	    right: 0;
+	    top: 0;
+		h6 {
+		    font-size: 1.75em;
+		    margin: 0;
+		    position: absolute;
+		    right: .25em;
+		    margin-top: -@triangle + 3px;
+		    letter-spacing: -1px;
+		}
+	}
+	
+	.rating {
+		right: 14px;
+		bottom: 55px;
+		font: 300% helvetica;
+		font-weight: bold;
+		color: white;
+		text-shadow: -1px 0px 3px rgba(0,0,0,.3);
+
+	}
+
+	.info {
+		background: rgba(230, 230, 230,.35);
+		margin-left: -1em;
+		bottom: 0;
+		padding: 4px .5em;
+	}
+}
+
+.reviews.mini {
+	h2 {
+		font-size: 1.65em;
+		margin-top: -.5em;
+	}
+	h5 {
+		font-size: 1.15em;
+		&.right {
+			bottom: 2.5em;
+		}	
+	}
+	em, a {
+		position: absolute;
+		right: .75em;
+		bottom: 45px;
+		font-size: .95em;
+	}
+	.rating {
+		bottom: 52px;
+	}
+	.price {
+	    width: 0;
+	    border-top: @triangle/1.5 solid @corner;
+	    border-left: @triangle/1.5 solid transparent;
+	    right: 0;
+	    top: 0;
+		h6 {
+		    font-size: 1.25em;
+		    margin: 0;
+		    position: absolute;
+		    right: 3px;
+		    margin-top: -@triangle/1.5 + 1px;
+		    letter-spacing: -1px;
+		}
+	}
+}
+
+.reviews.large {
+	h2 {
+		font-size: 2.75em;
+	}
+	h5 {
+		font-size: 1.5em;
+	}
+	em, a {
+	}
+	.rating {
+		font-size: 3.25em;
+	}
+	.price {
+		h6 {
+		}
+	}
+}
+.reviews.huge {
+	h2 {
+		font-size: 3em;
+	}
+	h5 {
+		font-size: 1.5em;
+	}
+	em, a {
+		font-size: 1.25em;
+		bottom: 3.15em;
+	}
+	.rating {
+		font-size: 4em;
+	}
+	.price {
+	    width: 0;
+	    border-top: @triangle*1.5 solid @corner;
+	    border-left: @triangle*1.5 solid transparent;
+	    right: 0;
+	    top: 0;
+		h6 {
+		    font-size: 2.65em;
+		    margin: 0;
+		    position: absolute;
+		    right: 3px;
+		    margin-top: -@triangle*1.5 + 1px;
+		    letter-spacing: -1px;
+		}
+	}
+}
