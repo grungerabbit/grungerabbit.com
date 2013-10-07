@@ -185,6 +185,26 @@ header.splash .tagline span {
   position: relative;
   top: .15em;
 }
+.play {
+  font: 10em "BlackoutMidnight";
+  text-align: center;
+  margin: .5em 0;
+}
+.play .char4 {
+  margin-left: -0.15em;
+}
+.play a {
+  padding: .25em .17em .17em .25em;
+  color: rgba(204, 0, 255, 0.8);
+  background: url(/lib/img/hearts.gif);
+  text-decoration: none;
+}
+.play a:hover {
+  color: #444444;
+}
+.play-baby {
+  text-align: center;
+}
 .posts h1.where {
   font-size: 3em;
   font-family: "BlackoutTwoAM";

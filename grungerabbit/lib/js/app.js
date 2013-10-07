@@ -1,4 +1,4 @@
-$(".splash .title, .name").lettering();
+$(".splash .title, .name, .play a").lettering();
 var c = "";
 $(".splash .title span").each(function() {
 	$(this).append("<em>"+$(this).text()+"</em>");
