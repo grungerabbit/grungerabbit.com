@@ -1,4 +1,0 @@
-ratings
-=======
-
-ratings system prototype
