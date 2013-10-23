@@ -1,0 +1,30 @@
+@import "../../_less/variables.less";
+@import "../../_less/mixins.less";
+
+@fbg: #eae5db;
+@faccent: #16b1c2;
+@faccento: #cb7939;
+@fgrey: #b8b7b4;
+
+body {
+	background: @fbg;
+}
+a:link, a:visited, a:active {
+	color: @faccent;
+}
+.post-header {
+	text-align: center;
+	color: @faccento;
+	h3, .meta {
+		color: lighten(@faccento, 20%);
+	}
+	h3 {
+		margin: 1em 0;
+	}
+}
+p, h2, li {
+	color: @fgrey;
+}
+.post p {
+	color: darken(@fgrey, 40%);
+}
