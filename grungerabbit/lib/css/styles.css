@@ -324,29 +324,8 @@ header.main nav li {
 header.main nav li:first-child {
   text-align: left;
 }
-.construction {
-  margin: 0 auto;
-  padding: 5em 0;
-  width: 98%;
-  max-width: 35em;
-  margin: 0;
-}
-.posts {
-  margin: 0 0 3em;
-}
-.posts header {
-  display: block;
-  clear: both;
-  padding: 2em 0 3em;
-}
-.posts .image-detail {
-  width: 100%;
-}
-.post img {
-  text-align: center;
-  margin: auto;
-  clear: both;
-  max-width: 100%;
+.art {
+  background: url(/photo.JPG);
 }
 .footer {
   margin: 0 auto;
