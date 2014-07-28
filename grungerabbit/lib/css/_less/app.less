@@ -4,8 +4,7 @@
 	box-sizing: border-box;
 }
 body {
-	//.gradient(#fff, 153, 255, 221, .4, 180px, 180px, 25deg);
-	background: url(../bg2.png);
+	background: #fefeff;
 }
 ::selection {
 	background: @coral; /* Safari */
@@ -33,11 +32,13 @@ hr {
 	background: #ccc;
 }
 header.splash {
+	background: url(../bg2.png);
 	.icon-grlogo {
 		font-size: 30em;
 		position: absolute;
-		color: @cofT;
-		z-index: -1;
+		right: 0;
+		//color: @cofT;
+		z-index: 0;
 	}
 	.title { padding: 1em 0; }
 	.name { display: inline; }

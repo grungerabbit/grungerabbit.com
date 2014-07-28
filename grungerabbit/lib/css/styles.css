@@ -74,6 +74,7 @@ you can use the generic selector below, but it's slower:
 body {
   font: 1em "WhitneyLight";
   font-weight: normal;
+  color: #222;
 }
 h1,
 h2,
@@ -256,17 +257,15 @@ header.splash .tagline span {
   box-sizing: border-box;
 }
 body {
-  background: url(../bg2.png);
+  background: #fefeff;
 }
 ::selection {
   background: #ffb7b7;
   /* Safari */
-
 }
 ::-moz-selection {
   background: #ffb7b7;
   /* Firefox */
-
 }
 .container {
   width: 100%;
@@ -287,11 +286,14 @@ hr {
   border: none;
   background: #ccc;
 }
+header.splash {
+  background: url(../bg2.png);
+}
 header.splash .icon-grlogo {
   font-size: 30em;
   position: absolute;
-  color: rgba(204, 0, 255, 0.8);
-  z-index: -1;
+  right: 0;
+  z-index: 0;
 }
 header.splash .title {
   padding: 1em 0;
@@ -364,6 +366,10 @@ header.main nav li:first-child {
   .site {
     max-width: 50em;
     width: 60%;
+  }
+  .site.main {
+    max-width: 70em;
+    width: 80%;
   }
   header.splash .icon-grlogo {
     top: 0;
