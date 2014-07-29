@@ -1,2 +1,10 @@
 name: grungerabbit
 markdown: redcarpet
+
+collections:
+  art:
+    output: true	
+  design:
+    output: true
+  code:
+    output: true

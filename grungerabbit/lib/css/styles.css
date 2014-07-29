@@ -251,6 +251,36 @@ header.splash .tagline span {
 .colophon {
   font-size: .75em;
 }
+/* -- FLUID GRID STYLES -- */
+.grid {
+  text-align: justify;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.grid li {
+  display: inline-block;
+  text-align: left;
+  width: 24%;
+}
+.grid.third li {
+  width: 31%;
+}
+.grid.half li {
+  width: 47%;
+}
+.grid:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.grid .placeholder {
+  padding: 0;
+}
+.placeholder {
+  width: 1em;
+  display: inline-block;
+}
 * {
   margin: 0;
   padding: 0;
@@ -324,8 +354,8 @@ header.main nav li {
 header.main nav li:first-child {
   text-align: left;
 }
-.art {
-  background: url(/photo.JPG);
+.art__gallery img {
+  max-width: 100%;
 }
 .footer {
   margin: 0 auto;
