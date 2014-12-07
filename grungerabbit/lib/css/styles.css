@@ -84,14 +84,6 @@ h5,
 h6 {
   font-weight: normal;
 }
-.post h1,
-.post h2,
-.post h3,
-.post h4,
-.post h5,
-.post h6 {
-  line-height: 1.25;
-}
 h1 {
   font-size: 2.5em;
 }
@@ -122,13 +114,88 @@ a:active {
 a:hover {
   color: #ffb7b7;
 }
+.quote {
+  font: 2.5em "BlackoutMidnight";
+}
+.colophon {
+  font-size: .75em;
+}
+/* -- FLUID GRID STYLES -- */
+.grid {
+  text-align: justify;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.grid li {
+  display: inline-block;
+  text-align: left;
+  width: 24%;
+}
+.grid.third li {
+  width: 31%;
+}
+.grid.half li {
+  width: 47%;
+}
+.grid:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.grid .placeholder {
+  padding: 0;
+}
+.placeholder {
+  width: 1em;
+  display: inline-block;
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fefeff;
+}
+::selection {
+  background: #ffb7b7;
+  /* Safari */
+}
+::-moz-selection {
+  background: #ffb7b7;
+  /* Firefox */
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.site {
+  margin: 0 auto;
+}
+.content {
+  min-height: 30em;
+  padding: 0 0 2em;
+}
+li {
+  list-style: none;
+}
+hr {
+  height: .05em;
+  border: none;
+  background: #ccc;
+}
+/* headers */
+header.splash {
+  background: url(../bg2.png);
+}
 header.splash .name {
   font-family: "BlackoutMidnight";
   margin: 0;
   padding: 0;
   color: black;
   text-decoration: none;
-  border-bottom: 1px dotted black;
 }
 header.splash .name span {
   position: relative;
@@ -146,6 +213,7 @@ header.splash .title {
   font-weight: bold;
   font-size: 9em;
   letter-spacing: 0em;
+  padding: 0.5em 0;
   text-transform: uppercase;
 }
 header.splash .title span {
@@ -186,177 +254,61 @@ header.splash .tagline span {
   position: relative;
   top: .15em;
 }
-.play {
-  font: 5em "BlackoutMidnight";
-  text-align: center;
-  margin: .5em 0;
-}
-.play .char4 {
-  margin-left: -0.15em;
-}
-.play a {
-  padding: .25em .17em .17em .25em;
-  color: rgba(204, 0, 255, 0.8);
-  background: url(/lib/img/hearts.gif);
-  text-decoration: none;
-}
-.play a:hover {
-  color: #444444;
-}
-.play-baby {
-  text-align: center;
-}
-.posts h1.where {
-  font-size: 3em;
-  font-family: "BlackoutTwoAM";
-  color: black;
-  line-height: 1.25em;
-  clear: both;
-  word-wrap: break-word;
-}
-.posts span {
-  float: right;
-  margin-top: 1em;
-}
-.posts strong {
-  font-family: "BlackoutSunrise";
-}
-.posts h2 {
-  margin: .25em 0;
-  padding: 2em;
-  background: rgba(255, 255, 0, 0.75);
-}
-.posts p {
-  text-align: right;
-}
-.post-header {
-  margin-bottom: 1em;
-}
-.post {
-  line-height: 1.5;
-}
-.post h2 + p {
-  margin-bottom: 1em;
-}
-.post p {
-  margin-bottom: 0.5em;
-}
-.post li {
-  list-style-type: circle;
-  margin-left: 1.25em;
-}
-.quote {
-  font: 2.5em "BlackoutMidnight";
-}
-.colophon {
-  font-size: .75em;
-}
-/* -- FLUID GRID STYLES -- */
-.grid {
-  text-align: justify;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.grid li {
-  display: inline-block;
-  text-align: left;
-  width: 24%;
-}
-.grid.third li {
-  width: 31%;
-}
-.grid.half li {
-  width: 47%;
-}
-.grid:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-}
-.grid .placeholder {
-  padding: 0;
-}
-.placeholder {
-  width: 1em;
-  display: inline-block;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #fefeff;
-}
-::selection {
-  background: #ffb7b7;
-  /* Safari */
-}
-::-moz-selection {
-  background: #ffb7b7;
-  /* Firefox */
-}
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-.site {
-  margin: 0 auto;
-}
-.content {
-  min-height: 30em;
-  padding: 0 0 2em;
-}
-li {
-  list-style: none;
-}
-hr {
-  height: .05em;
-  border: none;
-  background: #ccc;
-}
-header.splash {
-  background: url(../bg2.png);
-}
 header.splash .icon-grlogo {
-  font-size: 30em;
+  font-size: 26em;
   position: absolute;
   right: 0;
+  color: rgba(204, 0, 255, 0.8);
   z-index: 0;
-}
-header.splash .title {
-  padding: 1em 0;
 }
 header.splash .name {
   display: inline;
 }
-header.main a {
-  text-decoration: none;
+.old__site {
+  float: right;
+  padding: 7px;
+  position: relative;
+  z-index: 2;
 }
-header.main a .icon-grlogo {
-  font-size: 5em;
+/*header.main {
+	a {
+		text-decoration: none;
+		.icon-grlogo {
+			font-size: 5em;
+		}
+	}
+	nav {
+		text-align: justify;
+		padding: .5em 0 0;
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 100%;
+		}
+		li {
+			text-align: center;
+			display: inline-block;
+			width: 18%;
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
+}*/
+section {
+  padding: 1em 0;
+  border-bottom: 1px solid rgba(153, 255, 221, 0.5);
 }
-header.main nav {
-  text-align: justify;
-  padding: .5em 0 0;
+.hello {
+  font-size: 150%;
 }
-header.main nav:after {
-  content: '';
-  display: inline-block;
-  width: 100%;
+.hello h1 {
+  margin: 1em 0;
 }
-header.main nav li {
-  text-align: center;
-  display: inline-block;
-  width: 18%;
+.hello p {
+  margin: 0.5em 0;
 }
-header.main nav li:first-child {
-  text-align: left;
-}
-.art__gallery img {
-  max-width: 100%;
-}
+/* footer */
 .footer {
   margin: 0 auto;
   margin-top: 2em;

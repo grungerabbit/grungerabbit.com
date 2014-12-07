@@ -3,34 +3,24 @@ layout: default
 title: grungerabbit
 splash: true
 ---
-<section>
-	<div class="site main content">
-		<h1>I'm an artist, designer, and hacker based in New York City.</h1>
-		
-		<a href="http://uiuiu.me">Experimental art/design/math/code portfolio</a>
-	</div>
+
+<section class="hello">
+<div class="site">
+{% capture intro %}
+  {% include intro.markdown %}
+{% endcapture %}
+{{ intro | unindent | markdownify }}
+</div>
 </section>
 
-<section>
-	<h1>visual art from the last two years</h1>
-	
-<!--
-	<ul class="grid art__gallery">
-	{% for art in site.art %}
-		<li><img src="{{art.image}}"></li>
-	{% endfor %}
-	</ul>-->
-
-	
-	
-</section>
-
-
-<section class="site main ">
-	<h1>I'm an artist, designer, and hacker based in New York City.</h1>
-	
-	<a href="http://uiuiu.me">Experimental art/design/math/code portfolio</a>
-	
-	
-	
+<section class="projects">
+	<ul>
+		<li><a href="http://uiuiu.me">
+				<img src="http://uiuiu.me/lib/img/tiles.png">
+				UIUIU.me Current projects Experimental art/design/math/code portfolio
+			</a>
+		</li>
+		<li><a href="http://twitter.com/grungerabbit">@grungerabbit on Twitter</a></li>
+		<li><a href="https://github.com/grungerabbit/">grungerabbit on Github</a></li>
+	</ul>
 </section>
