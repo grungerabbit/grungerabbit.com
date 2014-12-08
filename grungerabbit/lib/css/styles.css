@@ -306,12 +306,48 @@ section {
   margin: 1em 0;
 }
 .hello p {
-  margin: 0.5em 0;
+  line-height: 1.66;
+  margin: 1em 0;
+}
+.site img {
+  max-width: 100%;
+}
+.projects li {
+  display: inline-block;
+  width: 33%;
+}
+.rebus {
+  padding: 0.25em 0.5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.rebus span {
+  visibility: hidden;
+}
+.rebus.hackNY {
+  background-image: url("/lib/logos/hackny.png");
+}
+.rebus.prodaq {
+  background-image: url("/lib/logos/prodaq.png");
+}
+.rebus.techatnyu {
+  background-image: url("/lib/logos/techatnyu.png");
+}
+.rebus:hover {
+  background-image: none;
+}
+.rebus:hover span {
+  visibility: visible;
+  color: black;
 }
 /* footer */
 .footer {
   margin: 0 auto;
   margin-top: 2em;
+}
+.footer img {
+  max-width: 100%;
 }
 .footer .contact {
   float: left;
@@ -325,11 +361,11 @@ section {
 }
 @media only screen and (min-width: 70em) {
   .site {
-    max-width: 50em;
+    max-width: 60rem;
     width: 60%;
   }
   .site.main {
-    max-width: 70em;
+    max-width: 70rem;
     width: 80%;
   }
   header.splash .icon-grlogo {

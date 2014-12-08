@@ -144,9 +144,54 @@ section {
 		margin: 1em 0;
 	}
 	p {
-		margin: 0.5em 0;
+		line-height: 1.66;
+		margin: 1em 0;
 	}
 }
+
+.site {
+	img {
+		max-width: 100%;
+	}
+}
+
+.projects {
+	li {
+		display: inline-block;
+		width: 33%;
+	}
+}
+
+// REBUS
+
+.rebus {
+	//border: 1px solid @coral;
+	padding: 0.25em 0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	span {
+		visibility: hidden;
+	}
+	&.hackNY {
+		background-image: url("/lib/logos/hackny.png");
+	}
+	&.prodaq {
+		background-image: url("/lib/logos/prodaq.png");
+	}
+	&.techatnyu {
+		background-image: url("/lib/logos/techatnyu.png");
+	}
+	&:hover {
+		background-image: none;
+		span {
+			visibility: visible;
+			color: black;
+		}
+	}
+}
+
+
 
 /* footer */
 
