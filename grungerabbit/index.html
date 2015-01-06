@@ -3,38 +3,34 @@ layout: default
 title: grungerabbit
 splash: true
 ---
-<div class="site content">
-	<div class="construction">
-	  <h1>i'm currently constructing, but in the meantime...</h1>
-	</div> 
-	
-	<hr>
-	<h1 class="play"><a href="/play">Play!</a></h1>
-	<p class="play-baby">some experiments, in progress!</p>
-	<hr>
 
-	  <div class="posts">
-	    {% for post in site.posts %}
-			<header>
-				  <h1 class="where"><a href="{{post.url}}">{{ post.title }}</a></h1>
-				  <span>{{ post.date | date_to_long_string }}</span>
-			</header>
-			
-		  	{% if post.showALL %}
-				{{ post.content }}
-			{% endif %}
-			{% if post.excerpt %}
-				{{post.excerpt}}
-			{% endif %}
-			{% if post.image %}
-				<img src="/lib/img/{{ post.image }}" class="image-detail">
-			{% endif %}
-	    
-			{% unless post.showALL %}
-			<p><a href="{{post.url}}">more</a></p>
-			{% endunless %}
-		{% endfor %}
-		
-		
-	</div>
+<section class="hello">
+<div class="site">
+{% capture intro %}
+  {% include intro.markdown %}
+{% endcapture %}
+{{ intro | unindent | markdownify }}
 </div>
+</section>
+
+<section class="projects">
+	<div class="site">
+		<ul>
+			<li>
+				<a href="http://uiuiu.me" title="UIUIU.me Current projects Experimental art/design/math/code portfolio">
+					<img src="http://uiuiu.me/lib/img/tiles.png">
+				</a>
+			</li>
+			<li>
+				<a href="http://uiuiu.me/face" title="iPad on a Face - Stupid Hackathon 2014">
+					<img src="http://uiuiu.me/lib-face/img/face.jpg">
+				</a>
+			</li>
+			<li>
+				<a href="http://www.instagram.com/grungerabbit" title="grungerabbit on instagram">
+					<img src="http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10598730_259602337584187_1287084299_n.jpg">
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>

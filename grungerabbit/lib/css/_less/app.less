@@ -1,11 +1,12 @@
+/* reset */
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 body {
-	//.gradient(#fff, 153, 255, 221, .4, 180px, 180px, 25deg);
-	background: url(../bg2.png);
+	background: #fefeff;
 }
 ::selection {
 	background: @coral; /* Safari */
@@ -27,24 +28,88 @@ body {
 li {
 	list-style: none;
 }
+
+
 hr {
 	height: .05em;
 	border: none;
 	background: #ccc;
 }
+
+/* headers */ 
+
 header.splash {
-	.icon-grlogo {
-		font-size: 30em;
-		position: absolute;
-		color: @cofT;
-		z-index: -1;
+	background: url(../bg2.png);
+	.name {
+		font-family: @midnight;
+		margin: 0;
+		padding: 0;
+		color: black;
+		text-decoration: none;
+		span {
+			position: relative;
+			&.char5 {
+				left: -0.055em;
+			}
+			&.char6 {
+				left: -0.02em;
+			}
+		}
 	}
-	.title { padding: 1em 0; }
+	.title { 
+		text-align: center;
+		color: @grPinkT;
+		font-family: @midnight; 
+		font-weight: bold;
+		font-size: 9em;
+		letter-spacing: 0em;
+		padding: 0.5em 0;
+		text-transform: uppercase;
+		span {
+			position: relative;
+			&.char2 { left: -0.02em; }
+			&.char3 { left: -0.025em; }
+			&.char5 { left: 0.015em; }
+			&.char11 { left: 0.01em;}
+			&.char12 { left: 0.03em;}
+		}
+		em {
+			.unselectable;
+			font-family: @sunrise;
+			color: @grYellowT;
+			position: absolute;
+			left: 0.01em;
+			top: 0.030em;
+		}
+	}
+	.tagline {
+		font-size: 2em;
+		line-height: 1.2;
+		span {
+			font: 1.25em @midnight;
+			display: block;
+			position: relative;
+			top: .15em;
+		}
+	}
+	.icon-grlogo {
+		font-size: 26em;
+		position: absolute;
+		right: 0;
+		color: @cofT;
+		z-index: 0;
+	}
 	.name { display: inline; }
 }
 
+.old__site {
+	float: right;
+	padding: 7px;
+	position: relative;
+	z-index: 2;
+}
 
-header.main {
+/*header.main {
 	a {
 		text-decoration: none;
 		.icon-grlogo {
@@ -68,35 +133,68 @@ header.main {
 			}
 		}
 	}
+}*/
+section {
+	padding: 1em 0;
+	border-bottom: 1px solid @mint;
 }
-
-
-.construction {
-	.site;
-	padding: 5em 0;
-	width: 98%;
-	max-width: 35em;
-	margin: 0;
-}
-.posts {
-	margin: 0 0 3em;
-	header {
-		display: block;
-		clear: both;
-		padding: 2em 0 3em;
+.hello {
+	font-size: 150%;
+	h1 {
+		margin: 1em 0;
 	}
-	.image-detail {
-		width: 100%;
+	p {
+		line-height: 1.66;
+		margin: 1em 0;
 	}
 }
-.post {
+
+.site {
 	img {
-		text-align: center;
-		margin: auto;
-		clear: both;
 		max-width: 100%;
 	}
 }
+
+.projects {
+	li {
+		display: inline-block;
+		width: 33%;
+	}
+}
+
+// REBUS
+
+.rebus {
+	//border: 1px solid @coral;
+	padding: 0.25em 0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	span {
+		visibility: hidden;
+	}
+	&.hackNY {
+		background-image: url("/lib/logos/hackny.png");
+	}
+	&.prodaq {
+		background-image: url("/lib/logos/prodaq.png");
+	}
+	&.techatnyu {
+		background-image: url("/lib/logos/techatnyu.png");
+	}
+	&:hover {
+		background-image: none;
+		span {
+			visibility: visible;
+			color: black;
+		}
+	}
+}
+
+
+
+/* footer */
+
 .footer {
 	.site;
 	margin-top: 2em;
