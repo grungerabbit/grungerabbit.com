@@ -326,13 +326,13 @@ section {
   visibility: hidden;
 }
 .rebus.hackNY {
-  background-image: url("/lib/logos/hackny.png");
+  background-image: url("/lib-gr/logos/hackny.png");
 }
 .rebus.prodaq {
-  background-image: url("/lib/logos/prodaq.png");
+  background-image: url("/lib-gr/logos/nasdaq-design.png");
 }
 .rebus.techatnyu {
-  background-image: url("/lib/logos/techatnyu.png");
+  background-image: url("/lib-gr/logos/techatnyu.png");
 }
 .rebus:hover {
   background-image: none;
