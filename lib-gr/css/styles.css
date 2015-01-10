@@ -1,15 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 @font-face {
   font-family: 'WhitneyLight';
   src: url('../fonts/whitney/whitneyhtf-light-webfont.eot');
@@ -118,13 +106,21 @@ ul + h5 {
 p {
   font-size: 100%;
 }
+a {
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -ms-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
 a:link,
 a:visited,
 a:active {
-  color: #fe0095;
+  color: #cc00ff;
+  text-decoration: none;
 }
 a:hover {
-  color: #ffb7b7;
+  color: black;
 }
 .quote {
   font: 2.5em "BlackoutMidnight";
@@ -183,6 +179,9 @@ body {
 .site {
   margin: 0 auto;
 }
+.site img {
+  max-width: 100%;
+}
 .content {
   min-height: 30em;
   padding: 0 0 2em;
@@ -205,6 +204,7 @@ header.splash .name {
   padding: 0;
   color: black;
   text-decoration: none;
+  display: inline;
 }
 header.splash .name span {
   position: relative;
@@ -270,40 +270,23 @@ header.splash .icon-grlogo {
   color: rgba(204, 0, 255, 0.8);
   z-index: 0;
 }
-header.splash .name {
-  display: inline;
-}
 .old__site {
   float: right;
   padding: 7px;
   position: relative;
   z-index: 2;
+  text-decoration: underline;
 }
-/*header.main {
-	a {
-		text-decoration: none;
-		.icon-grlogo {
-			font-size: 5em;
-		}
-	}
-	nav {
-		text-align: justify;
-		padding: .5em 0 0;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 100%;
-		}
-		li {
-			text-align: center;
-			display: inline-block;
-			width: 18%;
-			&:first-child {
-				text-align: left;
-			}
-		}
-	}
-}*/
+.old__site:link,
+.old__site:active,
+.old__site:visited {
+  color: #fe0095;
+  text-decoration: underline;
+}
+.old__site:hover {
+  color: #ffb7b7;
+  text-decoration: underline;
+}
 section {
   padding: 1em 0;
   border-bottom: 1px solid rgba(153, 255, 221, 0.5);
@@ -317,9 +300,6 @@ section {
 .hello p {
   line-height: 1.66;
   margin: 1em 0;
-}
-.site img {
-  max-width: 100%;
 }
 .rebus {
   padding: 0.25em 0.5em;
@@ -348,7 +328,8 @@ section {
 }
 /* footer */
 .footer {
-  margin-top: 2em;
+  background: url(../bg2.png) left center;
+  padding: 2em 0 0.5em;
 }
 .footer .colophon {
   clear: both;

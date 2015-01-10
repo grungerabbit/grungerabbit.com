@@ -31,3 +31,10 @@
 	-moz-background-size: @size1 @size2;
 	background-size: @size1 @size2;
 }
+.transition (@style: opacity, @duration: 1s, @type: ease-in-out) {
+    -webkit-transition: @style @duration @type;
+    -moz-transition: @style @duration @type;
+    -ms-transition: @style @duration @type;
+    -o-transition: @style @duration @type;
+    transition: @style @duration @type;
+}
