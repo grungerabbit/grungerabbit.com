@@ -106,13 +106,21 @@ ul + h5 {
 p {
   font-size: 100%;
 }
+a {
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -ms-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
 a:link,
 a:visited,
 a:active {
-  color: #fe0095;
+  color: #cc00ff;
+  text-decoration: none;
 }
 a:hover {
-  color: #ffb7b7;
+  color: black;
 }
 .quote {
   font: 2.5em "BlackoutMidnight";
@@ -130,10 +138,7 @@ a:hover {
 .grid li {
   display: inline-block;
   text-align: left;
-  width: 24%;
-}
-.grid.third li {
-  width: 31%;
+  width: 32%;
 }
 .grid.half li {
   width: 47%;
@@ -174,6 +179,9 @@ body {
 .site {
   margin: 0 auto;
 }
+.site img {
+  max-width: 100%;
+}
 .content {
   min-height: 30em;
   padding: 0 0 2em;
@@ -196,6 +204,7 @@ header.splash .name {
   padding: 0;
   color: black;
   text-decoration: none;
+  display: inline;
 }
 header.splash .name span {
   position: relative;
@@ -261,40 +270,23 @@ header.splash .icon-grlogo {
   color: rgba(204, 0, 255, 0.8);
   z-index: 0;
 }
-header.splash .name {
-  display: inline;
-}
 .old__site {
   float: right;
   padding: 7px;
   position: relative;
   z-index: 2;
+  text-decoration: underline;
 }
-/*header.main {
-	a {
-		text-decoration: none;
-		.icon-grlogo {
-			font-size: 5em;
-		}
-	}
-	nav {
-		text-align: justify;
-		padding: .5em 0 0;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 100%;
-		}
-		li {
-			text-align: center;
-			display: inline-block;
-			width: 18%;
-			&:first-child {
-				text-align: left;
-			}
-		}
-	}
-}*/
+.old__site:link,
+.old__site:active,
+.old__site:visited {
+  color: #fe0095;
+  text-decoration: underline;
+}
+.old__site:hover {
+  color: #ffb7b7;
+  text-decoration: underline;
+}
 section {
   padding: 1em 0;
   border-bottom: 1px solid rgba(153, 255, 221, 0.5);
@@ -309,13 +301,6 @@ section {
   line-height: 1.66;
   margin: 1em 0;
 }
-.site img {
-  max-width: 100%;
-}
-.projects li {
-  display: inline-block;
-  width: 33%;
-}
 .rebus {
   padding: 0.25em 0.5em;
   background-size: contain;
@@ -324,6 +309,7 @@ section {
 }
 .rebus span {
   visibility: hidden;
+  border-bottom: 1px solid black;
 }
 .rebus.hackNY {
   background-image: url("/lib-gr/logos/hackny.png");
@@ -339,21 +325,11 @@ section {
 }
 .rebus:hover span {
   visibility: visible;
-  color: black;
+  color: #cc00ff;
 }
 /* footer */
 .footer {
-  margin: 0 auto;
-  margin-top: 2em;
-}
-.footer img {
-  max-width: 100%;
-}
-.footer .contact {
-  float: left;
-  padding: .5em 0;
-  width: 33%;
-  min-width: 15em;
+  padding: 2em 0 0.5em;
 }
 .footer .colophon {
   clear: both;
@@ -361,8 +337,8 @@ section {
 }
 @media only screen and (min-width: 70em) {
   .site {
-    max-width: 60rem;
-    width: 60%;
+    max-width: 55rem;
+    width: 66%;
   }
   .site.main {
     max-width: 70rem;
@@ -373,13 +349,8 @@ section {
     left: 50%;
     margin-left: .25em;
   }
-  .post,
-  .post-header,
-  .posts {
-    font-size: 150%;
-  }
 }
-@media only screen and (min-width: 50em) and (max-width: 70em) {
+@media only screen and (min-width: 40em) and (max-width: 70em) {
   .site {
     max-width: 45em;
     width: 75%;
@@ -392,11 +363,6 @@ section {
     left: 50%;
     margin-left: 0em;
   }
-  .post,
-  .post-header,
-  .posts {
-    font-size: 127.5%;
-  }
 }
 @media only screen and (min-width: 40em) and (max-width: 50em) {
   header.splash .title {
@@ -406,10 +372,6 @@ section {
     top: 0;
     left: 50%;
     margin-left: -0.25em;
-  }
-  .site {
-    width: 90%;
-    max-width: 45em;
   }
 }
 @media only screen and (max-width: 40em) {
@@ -428,8 +390,14 @@ section {
   .site {
     width: 100%;
     max-width: 40em;
+    padding: 0.5em;
   }
-  .posts h2 {
-    padding: 1em;
+  .grid li {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .grid li {
+    width: 100%;
   }
 }

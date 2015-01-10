@@ -1,5 +1,4 @@
 /* reset */
-
 * {
 	margin: 0;
 	padding: 0;
@@ -20,6 +19,9 @@ body {
 }
 .site {
 	margin: 0 auto;
+	img {
+		max-width: 100%;
+	}
 }
 .content {
 	min-height: 30em;
@@ -28,8 +30,6 @@ body {
 li {
 	list-style: none;
 }
-
-
 hr {
 	height: .05em;
 	border: none;
@@ -37,7 +37,6 @@ hr {
 }
 
 /* headers */ 
-
 header.splash {
 	background: url(../bg2.png);
 	.name {
@@ -46,6 +45,7 @@ header.splash {
 		padding: 0;
 		color: black;
 		text-decoration: none;
+		display: inline;
 		span {
 			position: relative;
 			&.char5 {
@@ -99,41 +99,22 @@ header.splash {
 		color: @cofT;
 		z-index: 0;
 	}
-	.name { display: inline; }
 }
-
 .old__site {
 	float: right;
 	padding: 7px;
 	position: relative;
 	z-index: 2;
+	text-decoration: underline;
+	&:link, &:active, &:visited {
+		color: @grPink;
+		text-decoration: underline;
+	}
+	&:hover {
+		color: @coral;
+		text-decoration: underline;
+	}
 }
-
-/*header.main {
-	a {
-		text-decoration: none;
-		.icon-grlogo {
-			font-size: 5em;
-		}
-	}
-	nav {
-		text-align: justify;
-		padding: .5em 0 0;
-		&:after{
-			content: '';
-			display: inline-block;
-			width: 100%;
-		}
-		li {
-			text-align: center;
-			display: inline-block;
-			width: 18%;
-			&:first-child {
-				text-align: left;
-			}
-		}
-	}
-}*/
 section {
 	padding: 1em 0;
 	border-bottom: 1px solid @mint;
@@ -149,29 +130,15 @@ section {
 	}
 }
 
-.site {
-	img {
-		max-width: 100%;
-	}
-}
-
-.projects {
-	li {
-		display: inline-block;
-		width: 33%;
-	}
-}
-
 // REBUS
-
 .rebus {
-	//border: 1px solid @coral;
 	padding: 0.25em 0.5em;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
 	span {
 		visibility: hidden;
+		border-bottom: 1px solid black;
 	}
 	&.hackNY {
 		background-image: url("/lib-gr/logos/hackny.png");
@@ -186,24 +153,15 @@ section {
 		background-image: none;
 		span {
 			visibility: visible;
-			color: black;
+			color: @grPurple;
 		}
 	}
 }
 
-
-
 /* footer */
-
 .footer {
-	.site;
-	margin-top: 2em;
-	.contact {
-		float: left;
-		padding: .5em 0;
-		width: 33%;
-		min-width: 15em;
-	}
+	//background: url(../bg2.png) left center;
+	padding: 2em 0 0.5em;
 	.colophon {
 		clear: both;
 		text-align: right;
