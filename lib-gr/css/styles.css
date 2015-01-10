@@ -309,6 +309,7 @@ section {
 }
 .rebus span {
   visibility: hidden;
+  border-bottom: 1px solid black;
 }
 .rebus.hackNY {
   background-image: url("/lib-gr/logos/hackny.png");
@@ -324,11 +325,10 @@ section {
 }
 .rebus:hover span {
   visibility: visible;
-  color: black;
+  color: #cc00ff;
 }
 /* footer */
 .footer {
-  background: url(../bg2.png) left center;
   padding: 2em 0 0.5em;
 }
 .footer .colophon {
