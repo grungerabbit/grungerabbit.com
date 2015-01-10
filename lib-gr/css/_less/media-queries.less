@@ -1,0 +1,89 @@
+//@media only screen and (max-width: 40em) {
+//	.container {
+//		padding: 1em;
+//	}
+//	.site {
+//		width: 100%;
+//	}
+//}
+
+@media only screen and (min-width: 70em) {
+	.site {
+		max-width: 60rem;
+		width: 60%;
+	}
+	.site.main {
+		max-width: 70rem;
+		width: 80%;
+	}
+	header.splash {
+		.icon-grlogo {
+			top: 0;
+			left: 50%;
+			margin-left: .25em;
+		}
+	}
+	.post, .post-header, .posts {
+		font-size: @bump;
+	}
+}
+@media only screen and (min-width: 50em) and (max-width: 70em) {
+	.site {
+		max-width: 45em;
+		width: 75%;
+	}
+	header.splash {
+		.title {
+			font-size: 7em;
+		}
+		.icon-grlogo {
+			top: 0;
+			left: 50%;
+			margin-left: 0em;
+		}
+	}
+	.post, .post-header, .posts {
+		font-size: @bump * .85;
+	}
+}
+@media only screen and (min-width:40em) and (max-width: 50em) {
+	header.splash {
+		.title {
+			font-size: 6em;
+		}
+		.icon-grlogo {
+			top: 0;
+			left: 50%;
+			margin-left: -.25em;
+		}
+	}
+	.site {
+		width: 90%;
+		max-width: 45em;
+	}
+}
+@media only screen and (max-width: 40em) {
+	header.splash {
+		.title {
+			font-size: 5em;
+		}
+		.icon-grlogo {
+			font-size: 20em;
+			top: .2em;
+			left: 50%;
+			margin-left: -0.5em;
+		}
+	}
+	.container {
+		padding: 1em;
+	}
+	.site {
+		width: 100%;
+		max-width: 40em;
+	}
+	.posts {
+		h2 {
+			padding: 1em;
+		}
+	}
+}

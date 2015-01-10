@@ -1,0 +1,435 @@
+@font-face {
+  font-family: 'WhitneyLight';
+  src: url('../fonts/whitney/whitneyhtf-light-webfont.eot');
+  src: url('../fonts/whitney/whitneyhtf-light-webfont.woff') format('woff'), url('../fonts/whitney/whitneyhtf-light-webfont.ttf') format('truetype'), url('../fonts/whitney/whitneyhtf-light-webfont.svg#webfont8dpc4tr7') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackoutTwoAM';
+  src: url('../fonts/webfont-twoam/blackout_two_am-webfont.eot');
+  src: url('../fonts/webfont-twoam/blackout_two_am-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/webfont-twoam/blackout_two_am-webfont.woff') format('woff'), url('../fonts/webfont-twoam/blackout_two_am-webfont.ttf') format('truetype'), url('../fonts/webfont-twoam/blackout_two_am-webfont.svg#BlackoutTwoAM') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackoutMidnight';
+  src: url('../fonts/webfont-midnight/blackout_midnight-webfont.eot');
+  src: url('../fonts/webfont-midnight/blackout_midnight-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/webfont-midnight/blackout_midnight-webfont.woff') format('woff'), url('../fonts/webfont-midnight/blackout_midnight-webfont.ttf') format('truetype'), url('../fonts/webfont-midnight/blackout_midnight-webfont.svg#BlackoutMidnight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackoutSunrise';
+  src: url('../fonts/webfont-sunrise/blackout_sunrise-webfont.eot');
+  src: url('../fonts/webfont-sunrise/blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/webfont-sunrise/blackout_sunrise-webfont.woff') format('woff'), url('../fonts/webfont-sunrise/blackout_sunrise-webfont.ttf') format('truetype'), url('../fonts/webfont-sunrise/blackout_sunrise-webfont.svg#BlackoutSunrise') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'grungerabbit';
+  src: url('../fonts/grungerabbit/grungerabbit.eot');
+  src: url('../fonts/grungerabbit/grungerabbit.eot?#iefix') format('embedded-opentype'), url('../fonts/grungerabbit/grungerabbit.woff') format('woff'), url('../fonts/grungerabbit/grungerabbit.ttf') format('truetype'), url('../fonts/grungerabbit/grungerabbit.svg#grungerabbit') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'LicketySplit';
+  src: url('../fonts/lickety-split/licketysplit-webfont.eot');
+  src: url('../fonts/lickety-split/licketysplit-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lickety-split/licketysplit-webfont.woff') format('woff'), url('../fonts/lickety-split/licketysplit-webfont.ttf') format('truetype'), url('../fonts/lickety-split/licketysplit-webfont.svg#LicketySplitMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'grungerabbit';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-grlogo {
+  font-family: 'grungerabbit';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-grlogo:before {
+  content: "\3007";
+}
+body {
+  font: 1em "WhitneyLight";
+  font-weight: normal;
+  color: #222;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-style: italic;
+}
+ul + h5 {
+  margin-top: .5em;
+}
+p {
+  font-size: 100%;
+}
+a:link,
+a:visited,
+a:active {
+  color: #fe0095;
+}
+a:hover {
+  color: #ffb7b7;
+}
+.quote {
+  font: 2.5em "BlackoutMidnight";
+}
+.colophon {
+  font-size: .75em;
+}
+/* -- FLUID GRID STYLES -- */
+.grid {
+  text-align: justify;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.grid li {
+  display: inline-block;
+  text-align: left;
+  width: 24%;
+}
+.grid.third li {
+  width: 31%;
+}
+.grid.half li {
+  width: 47%;
+}
+.grid:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.grid .placeholder {
+  padding: 0;
+}
+.placeholder {
+  width: 1em;
+  display: inline-block;
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #fefeff;
+}
+::selection {
+  background: #ffb7b7;
+  /* Safari */
+}
+::-moz-selection {
+  background: #ffb7b7;
+  /* Firefox */
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.site {
+  margin: 0 auto;
+}
+.content {
+  min-height: 30em;
+  padding: 0 0 2em;
+}
+li {
+  list-style: none;
+}
+hr {
+  height: .05em;
+  border: none;
+  background: #ccc;
+}
+/* headers */
+header.splash {
+  background: url(../bg2.png);
+}
+header.splash .name {
+  font-family: "BlackoutMidnight";
+  margin: 0;
+  padding: 0;
+  color: black;
+  text-decoration: none;
+}
+header.splash .name span {
+  position: relative;
+}
+header.splash .name span.char5 {
+  left: -0.055em;
+}
+header.splash .name span.char6 {
+  left: -0.02em;
+}
+header.splash .title {
+  text-align: center;
+  color: rgba(254, 0, 149, 0.9);
+  font-family: "BlackoutMidnight";
+  font-weight: bold;
+  font-size: 9em;
+  letter-spacing: 0em;
+  padding: 0.5em 0;
+  text-transform: uppercase;
+}
+header.splash .title span {
+  position: relative;
+}
+header.splash .title span.char2 {
+  left: -0.02em;
+}
+header.splash .title span.char3 {
+  left: -0.025em;
+}
+header.splash .title span.char5 {
+  left: 0.015em;
+}
+header.splash .title span.char11 {
+  left: 0.01em;
+}
+header.splash .title span.char12 {
+  left: 0.03em;
+}
+header.splash .title em {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-family: "BlackoutSunrise";
+  color: rgba(255, 255, 0, 0.75);
+  position: absolute;
+  left: 0.01em;
+  top: 0.030em;
+}
+header.splash .tagline {
+  font-size: 2em;
+  line-height: 1.2;
+}
+header.splash .tagline span {
+  font: 1.25em "BlackoutMidnight";
+  display: block;
+  position: relative;
+  top: .15em;
+}
+header.splash .icon-grlogo {
+  font-size: 26em;
+  position: absolute;
+  right: 0;
+  color: rgba(204, 0, 255, 0.8);
+  z-index: 0;
+}
+header.splash .name {
+  display: inline;
+}
+.old__site {
+  float: right;
+  padding: 7px;
+  position: relative;
+  z-index: 2;
+}
+/*header.main {
+	a {
+		text-decoration: none;
+		.icon-grlogo {
+			font-size: 5em;
+		}
+	}
+	nav {
+		text-align: justify;
+		padding: .5em 0 0;
+		&:after{
+			content: '';
+			display: inline-block;
+			width: 100%;
+		}
+		li {
+			text-align: center;
+			display: inline-block;
+			width: 18%;
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
+}*/
+section {
+  padding: 1em 0;
+  border-bottom: 1px solid rgba(153, 255, 221, 0.5);
+}
+.hello {
+  font-size: 150%;
+}
+.hello h1 {
+  margin: 1em 0;
+}
+.hello p {
+  line-height: 1.66;
+  margin: 1em 0;
+}
+.site img {
+  max-width: 100%;
+}
+.projects li {
+  display: inline-block;
+  width: 33%;
+}
+.rebus {
+  padding: 0.25em 0.5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.rebus span {
+  visibility: hidden;
+}
+.rebus.hackNY {
+  background-image: url("/lib-gr/logos/hackny.png");
+}
+.rebus.prodaq {
+  background-image: url("/lib-gr/logos/nasdaq-design.png");
+}
+.rebus.techatnyu {
+  background-image: url("/lib-gr/logos/techatnyu.png");
+}
+.rebus:hover {
+  background-image: none;
+}
+.rebus:hover span {
+  visibility: visible;
+  color: black;
+}
+/* footer */
+.footer {
+  margin: 0 auto;
+  margin-top: 2em;
+}
+.footer img {
+  max-width: 100%;
+}
+.footer .contact {
+  float: left;
+  padding: .5em 0;
+  width: 33%;
+  min-width: 15em;
+}
+.footer .colophon {
+  clear: both;
+  text-align: right;
+}
+@media only screen and (min-width: 70em) {
+  .site {
+    max-width: 60rem;
+    width: 60%;
+  }
+  .site.main {
+    max-width: 70rem;
+    width: 80%;
+  }
+  header.splash .icon-grlogo {
+    top: 0;
+    left: 50%;
+    margin-left: .25em;
+  }
+  .post,
+  .post-header,
+  .posts {
+    font-size: 150%;
+  }
+}
+@media only screen and (min-width: 50em) and (max-width: 70em) {
+  .site {
+    max-width: 45em;
+    width: 75%;
+  }
+  header.splash .title {
+    font-size: 7em;
+  }
+  header.splash .icon-grlogo {
+    top: 0;
+    left: 50%;
+    margin-left: 0em;
+  }
+  .post,
+  .post-header,
+  .posts {
+    font-size: 127.5%;
+  }
+}
+@media only screen and (min-width: 40em) and (max-width: 50em) {
+  header.splash .title {
+    font-size: 6em;
+  }
+  header.splash .icon-grlogo {
+    top: 0;
+    left: 50%;
+    margin-left: -0.25em;
+  }
+  .site {
+    width: 90%;
+    max-width: 45em;
+  }
+}
+@media only screen and (max-width: 40em) {
+  header.splash .title {
+    font-size: 5em;
+  }
+  header.splash .icon-grlogo {
+    font-size: 20em;
+    top: .2em;
+    left: 50%;
+    margin-left: -0.5em;
+  }
+  .container {
+    padding: 1em;
+  }
+  .site {
+    width: 100%;
+    max-width: 40em;
+  }
+  .posts h2 {
+    padding: 1em;
+  }
+}
