@@ -1,0 +1,17 @@
+---
+layout: default
+title: grungerabbit - Cheryl Wu
+splash: false
+permalink: /chronology/
+---
+
+<section class="chronology">
+	<div class="site">
+	{% capture chrono %}
+  	{% include chrono.markdown %}
+	{% endcapture %}
+	{{ chrono | unindent | markdownify }}
+
+	<p>Inspired by <a href="http://abhiagarwal.com/chronology">Abhi</a> and <a href="http://dariajung.com/chronology.html">Daria</a>
+	</div>
+</section>

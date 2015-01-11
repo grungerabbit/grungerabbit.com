@@ -335,6 +335,37 @@ section {
   clear: both;
   text-align: right;
 }
+.cheryl__wu--nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #cc00ff;
+}
+.cheryl__wu--nav li {
+  display: inline-block;
+  padding: 1em;
+}
+.cheryl__wu--nav a:link,
+.cheryl__wu--nav a:visited,
+.cheryl__wu--nav a:active {
+  color: white;
+}
+.chronology p {
+  margin: 0.5em 0;
+}
+.chronology li {
+  margin: 1em 0;
+}
+.chronology li li {
+  margin: 0.5em 2em;
+  list-style: circle;
+}
+.chronology li strong {
+  display: block;
+  font-family: "BlackoutMidnight";
+  font-size: 1.5em;
+}
 @media only screen and (min-width: 70em) {
   .site {
     max-width: 55rem;
