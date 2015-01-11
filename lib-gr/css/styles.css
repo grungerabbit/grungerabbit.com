@@ -366,6 +366,18 @@ section {
   font-family: "BlackoutMidnight";
   font-size: 1.5em;
 }
+.chrono__entry {
+  background-color: #eee;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-size: 75%;
+}
+.chrono__entry.hackNY {
+  background-color: red;
+}
+.chrono__entry.NYU {
+  background-color: purple;
+}
 @media only screen and (min-width: 70em) {
   .site {
     max-width: 55rem;
