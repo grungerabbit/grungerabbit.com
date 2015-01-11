@@ -7,11 +7,19 @@ permalink: /chronology/
 
 <section class="chronology">
 	<div class="site">
-	{% capture chrono %}
-  	{% include chrono.markdown %}
-	{% endcapture %}
-	{{ chrono | unindent | markdownify }}
+		<div class="chronology__column monthly">
+			{% capture month %}
+		  	{% include month.markdown %}
+			{% endcapture %}
+			{{ month | unindent | markdownify }}
+		</div>
+		<div class="chronology__column range">
+			{% capture range %}
+		  	{% include range.markdown %}
+			{% endcapture %}
+			{{ range | unindent | markdownify }}
+		</div>
 
-	<p>Inspired by <a href="http://abhiagarwal.com/chronology">Abhi</a> and <a href="http://dariajung.com/chronology.html">Daria</a>
+	<p style="clear: both">Inspired by <a href="http://abhiagarwal.com/chronology">Abhi</a> and <a href="http://dariajung.com/chronology.html">Daria</a>
 	</div>
 </section>

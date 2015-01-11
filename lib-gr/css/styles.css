@@ -366,6 +366,22 @@ section {
   font-family: "BlackoutMidnight";
   font-size: 1.5em;
 }
+.chronology .site {
+  *zoom: 1;
+}
+.chronology .site:before,
+.chronology .site:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.chronology .site:after {
+  clear: both;
+}
+.chronology__column {
+  width: 50%;
+  float: left;
+}
 .chrono__entry {
   background-color: #eee;
   padding: 0.5em;
