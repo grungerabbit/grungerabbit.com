@@ -1,6 +1,8 @@
 
 ## Range
 
+* **Fall 2014**
+	* Chinese for Heritage Learners
 * **Spring 2013**
 	* <span class="chrono__entry class">Class</span> <span class="chrono__entry bhqfu">BHQFU</span> <span class="chrono__entry design">design</span> Generative Design
 	* <span class="chrono__entry class">Class</span> <span class="chrono__entry NYU">NYU</span> Sophomore schedule
@@ -14,7 +16,8 @@
 		* <span class="chrono__entry art">art</span> <span class="chrono__entry theory">theory</span> Art in Critical Theory - Meleko Mokgosi, Gallatin
 		* <span class="chrono__entry technology">technology</span> <span class="chrono__entry business">business</span> Computers and Society - Evan Korth, CAS Computer Science
 		* <span class="chrono__entry business">business</span> <span class="chrono__entry art">art</span> Creative Fundraising - Wilder Knight/Ed DePalma, Tisch Open
-		* <span class="chrono__entry art">art</span> <span class="chrono__entry desire">desire</span> Sex and Contemporary Art - Kathe Burkhart, Steinhardt Art
+		* <span class="chrono__entry art">art</span> <span class="chrono__entry desire">desire</span> Interdisciplinary Undergraduate Projects in
+Studio Art: Sex and Contemporary Art - Kathe Burkhart, Steinhardt Art
 * **Summer 2012**
 	* <span class="chrono__entry work">Work</span> <span class="chrono__entry hackNY">hackNY</span> <span class="chrono__entry technology">technology</span> Worked at Sailthru as Design Intern as a hackNY Summer Fellow
 * **Spring 2012**
@@ -22,7 +25,7 @@
 		* <span class="chrono__entry art">art</span> <span class="chrono__entry business">Business</span> <span class="chrono__entry theory">theory</span> Art of Now - Haley Mellin, Steinhardt Art
 		* <span class="chrono__entry technology">technology</span> <span class="chrono__entry art">art</span> Intro to Physical Computing - Scott Fitzgerald, Tisch ITP
 		* <span class="chrono__entry technology">technology</span> <span class="chrono__entry business">Business</span> Rise of Internet Media - Aaron Cohen, Steinhardt MCC
-		* <span class="chrono__entry desire">desire</span> <span class="chrono__entry theory">theory</span> Urban Desires - Neil Meyer, Gallatin First Year Seminar
+		* <span class="chrono__entry desire">desire</span> <span class="chrono__entry theory">theory</span> Urban Desires: Sex, Gender and New York City - Neil Meyer, Gallatin First Year Seminar
 * **Fall 2011** 
 	* <span class="chrono__entry class">class</span> <span class="chrono__entry NYU">NYU</span> Freshman schedule
 		* <span class="chrono__entry art">art</span> Artists' Lives, Artists' Work - Yevgeniya Traps, Gallatin First Year Writing

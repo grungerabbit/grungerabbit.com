@@ -42,6 +42,7 @@
 	* Started writing down Gratitudes
 	* Started Morning Pages
 	* Made up Evolution of Intellectual Complexity final
+	* Cumulative GPA from NYU: 3.723
 * **April 2014**
 	* DemoDays
 	* Visited Darla for her Division III with Clay
@@ -158,6 +159,7 @@
 * **January 2012**
 	* Spring Film Series
 	* <span class="chrono__entry work">Work</span> <span class="chrono__entry NYU">nyu</span> Interviewed for and got NYU Stern Finance Department Web Assistant position
+	* Dean's List
 * **December 2011**
 	* <span class="chrono__entry project">Project</span> <span class="chrono__entry GREEDYTREES">GREEDYTREES</span> <span class="chrono__entry technology">technology</span> Built [Pseudoacademic.com](http://pseudoacademic.com/) with Charles
 	* <span class="chrono__entry project">Project</span> <span class="chrono__entry art">art</span> Started [Froot Loop Pokemon](http://frootlooppokemon.tumblr.com/)
