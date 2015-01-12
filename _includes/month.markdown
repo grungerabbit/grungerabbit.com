@@ -21,11 +21,13 @@
 * **October 2013**
 * **September 2013**
 	* <span class="chrono__entry work">Work</span> <span class="chrono__entry prodaq">Prodaq</span> Promoted to Junior Product Designer at Nasdaq
-	* <span class="chrono__entry NYU">NYU</span> Took a medical leave of absence from NYU Gallatin
+	* <span class="chrono__entry NYU">NYU</span> Took a medical leave of absence from NYU Gallatin, to better sort out the pieces of my life
 * **August 2013**
 	* <span class="chrono__entry bday">me++</span> Turned 20
 	* <span class="chrono__entry NYU">NYU</span> <span class=
 	chrono__entry yes">Yes</span> Made Spring 2013 NYU Gallatin Dean's List
+	* <span class="chrono__entry yes">yes</span> Snake plead guilty to forgery
+	* <span class="chrono__entry travel">travel</span> Visited Darla in White River Junction, Vermont
 	* <span class="chrono__entry desire">desire</span> Started dating primary partner, [Clayton](http://claytonalbachten.com/)
 * **July 2013**
 	* <span class="chrono__entry desire">desire</span> Met Clayton in person for the first time
@@ -33,6 +35,7 @@
 	* <span class="chrono__entry nope">Nope</span> Writing
 	* <span class="chrono__entry nope">Nope</span> Rebellion
 * **June 2013**
+	* <span class="chrono__entry domestic">domestic</span> <span class="chrono__entry yes">yes</span> Moved back into UES Apartment, alone, scared. Went to Moth Story Slam and spoke with 3 midwives who consoled me when I broke down crying
 	* <span class="chrono__entry nope">Nope</span> The aftermath
 	* <span class="chrono__entry nope">Nope</span> Started therapy
 	* <span class="chrono__entry nope">Nope</span> Stayed in NJ while figuring out life
@@ -40,7 +43,7 @@
 	* <span class="chrono__entry nope">Nope</span> Figured out Snake was a con artist
 * **May 2013**
 	* <span class="chrono__entry nope">Nope</span> One year with Snake; he spends it in NYU Langone hospital
-	* <span class="chrono__entry nope">Nope</span> Broke ankle
+	* <span class="chrono__entry nope">Nope</span> Broke ankle running across Broadway in the rain
 * **April 2013**
 	* <span class="chrono__entry nope">Nope</span> Settled Housing Court case
 	* <span class="chrono__entry NYU">NYU</span> Field trips to Brooklyn Navy Yard and Roosevelt Island with Think Big class
@@ -77,6 +80,7 @@
 	* <span class="chrono__entry hackNY">hackNY</span> <span class="chrono__entry technology">technology</span> Began hackNY fellowship, met moot at kickoff dinner
 	* <span class="chrono__entry domestic">Domestic</span> Moved into first apartment, Bedford Stuyvesant, Brooklyn
 	* <span class="chrono__entry work">Work</span> <span class="chrono__entry NYU">nyu</span> Stopped working at NYU Stern Finance
+	* <span class="chrono__entry nope">nope</span> Broke Macbook Pro laptop
 	* <span class="chrono__entry NYU">nyu</span> Ended freshman year
 * **April 2012**
 	* <span class="chrono__entry desire">Desire</span> Uncountable # of OkC messages, 3 dates. 1st never contacts again, 2nd becomes a friend, 3rd starts dating
