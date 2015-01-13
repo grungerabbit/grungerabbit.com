@@ -1,19 +1,50 @@
 
 ## Month
 
+#### ENTRIES I AM ADDING LATER BECAUSE I FORGOT
+
+- stepmother moved in to wf 12/2014
+- built NYUSW.com
+- made GHC shirt for tech@NYU
+- chatting with Ethan about tech@NYU
+- support from hackNY and tech@NYU immediately after snake
+- the 20 minutes I was on NYUPB e-board as webmaster
+- blipfest with Amy
+- hackNY alumni dinners
+- hackNY events during fellowship (Joanne Wilson, Fred Wilson + USQV, etc, etc)
+- Visit to Tumblr b4 hackNY/friends started working there  [aka before we could just kinda walk in without too many questions being asked] because I chatted up David Karp at a Rise of Internet Media class and showed him froot loop pokemon
+- dinners with wf friends
+- add some paintings in there
+- minimalism
+- airbnb photo
+- missing some cooking w shawn
+
+#### FEATURES FOR LATER
+
+- proper tags on every post
+- tags will help filter down posts
+- tags will be styled and not ugly
+- rethink month/range split? what if range was actually next to the months it was covering?
+- cumulative exercise
+- books? media?? aaaa AAAA
+- more descriptions on some of the juicier entries
+- organization of each month?
+
 * **January 2015** 
 	* Promoted to Product Designer at Nasdaq
 	* Ran 7.3 Miles (as of 1/12)
+	* Tracked 135,865 steps, 58.28 miles
 	* Started Classpass membership
 * **December 2014**
 	* UIUIU ![Lucid](http://uiuiu.me/lib/img/lucid.png)
 	* Visited Darla in Northampton, MA for Birthday/New Year's Eve
 	* Ran 7.0 Miles
+	* Tracked 393,491 steps, 169.25 miles
 	* Cooked with Shawn for Christmas
 	* Helped organize e-board and alumni party for tech@NYU
 	* Lead Volunteer effort for Pro/Design Conference
 	* UIUIU ![Floorplans](http://uiuiu.me/lib/img/floorplan.png)
-	* Ran MVP trial of Aureum at Local Hack Day
+	* Ran MVP trial of Aureum at Local Hack Day, saved over 100 items from landfill
 	* Helped organize and volunteered at Local Hack Day, a collaboration between Major League Hacking, NYU Poly EIA, Cooper Union Create@Cooper, and tech@NYU
 	![Local Hack Day NYC](https://pbs.twimg.com/media/B4MYGrHIMAAzHoo.jpg)
 	* Started using Fitbit Flex
