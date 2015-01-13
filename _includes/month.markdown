@@ -15,12 +15,14 @@
 	* UIUIU ![Floorplans](http://uiuiu.me/lib/img/floorplan.png)
 	* Ran MVP trial of Aureum at Local Hack Day
 	* Helped organize and volunteered at Local Hack Day, a collaboration between Major League Hacking, NYU Poly EIA, Cooper Union Create@Cooper, and tech@NYU
+	![Local Hack Day NYC](https://pbs.twimg.com/media/B4MYGrHIMAAzHoo.jpg)
 	* Started using Fitbit Flex
 * **November 2014**
 	* Cooked with Shawn for Thanksgiving
 	* Ran 10.8 Miles
 	* Started Aureum with Abhi
 	* Built iPad on a Face at Stupid Hackathon
+	![iPad on a Face](http://uiuiu.me/lib-face/img/face.jpg)
 	* Stopped hosting on Airbnb
 	* Clay graduated from General Assembly
 	* Helped organize $BASH with Columbia CORE
@@ -28,10 +30,13 @@
 * **October 2014**
 	* Participated in Ladies Storm Hackathons meetup at hackNY and discussed diversity and male allies
 	* Spoke at hackNY Fall 2014 about hackNY experience
+	![hackNY fall 2014](https://farm8.staticflickr.com/7482/15746036179_8e342189a6_c.jpg)
 	* Volunteered at hackNY Fall 2014
 	* Organized first meeting of Tech Collab, a coalition of NYC-student technology clubs of NYU, NYU Polytechnic, Cooper Union, and Columbia
+	![Tech Collab](https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10690155_10152702884717459_4812119251532615407_n.jpg?oh=6fa1bcdad1baf153faab69075cedb164&oe=556E99FC&__gda__=1432856489_1354f521eb41a04c1aa92b56455fd707)
 	* Had conversations with a dozen companies at Grace Hopper for tech@NYU fundraising, got leads
 	* Attended Grace Hopper Conference in Phoenix, Arizona with Freia and Terri. Witnessed Satya Nadella "karma" speech
+	![Grace Hopper](https://pbs.twimg.com/media/BzY2n-2CAAAyUPC.jpg)
 	* Attended Sass Conference in NYC
 	* UIUIU ![Triangle Trail](http://uiuiu.me/lib/img/tritrail.png)
 	* Ran 17.4 Miles, cleared 50 Miles
@@ -39,17 +44,19 @@
 	* UIUIU ![Reframe Me](http://uiuiu.me/lib/img/reframe.png)
 	* Organized tech@NYU Community Welcome Party
 	* Attended Write/Speak/Code Conference in NYC
+	* Joined tech@NYU Infrastructure Team
+	![Infrastructure](https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10670089_1707819979442570_6316499341518250921_n.jpg?oh=f80f18a6836cd9d6c883755c30e29326&oe=556BAFAB&__gda__=1428671937_16e4d4ce20d4bcd72b9d70f531b39168)
 	* Ran 29.0 Miles
 * **August 2014**
 	* Helped move in Shawn to Rutgers University
 	* Clay started at General Assembly
-	* <span class="chrono__entry bday">me++</span> Turned 21
+	* <span class="chrono__entry bday">me++</span> Turned 21 ![Central Park flowers](http://photos-d.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10598730_259602337584187_1287084299_n.jpg)
 	* <span class="chrono__entry exercise">exercise</span> Started running using Couch-to-5k plan
 	* Ran 8.1 Miles
 	* Revamped Ship
 * **July 2014**
 	* Attended LibertyJS Conference in Philadelphia
-	* Cleaned up family's house significantly with Darla, started do you want this thing
+	* Cleaned up family's house significantly with Darla, started [do you want this thing](http://do-you-want-this-thing.tumblr.com/) ![Pikachu](http://40.media.tumblr.com/d7fb332035456b440cce50b0d7ccb138/tumblr_n8veo1rdZX1tgeqbto1_1280.jpg)
 	* Started and assumed leadership of tech@NYU Community
 	* Attended tech@NYU Retreat in Jefferson, NJ
 	* Organized tech@NYU Retreat logistics
@@ -92,8 +99,10 @@
 * **February 2014**
 	* Built Beyonce Trader with Abhi, Terri, Andrew
 	* Helped organize tech@NYU Retreat in Connecticut
+	![Retreat](https://pbs.twimg.com/profile_banners/102293733/1391379036/1500x500)
 	* Became tech@NYU Operations Leader
-	* Worked on An Obstinately Unromantic Valenzine with Darla
+	* Worked on [An Obstinately Unromantic Valenzine](https://hampedia.org/images/4/42/ValenzineWEB.pdf) with Darla
+	![Obstinately Unromantic Valenzine](http://grungerabbit.com/lib-gr/art/thumbnails/valenzine.jpg)
 * **January 2014**
 	* Attended hackNY Reunion with Rob Spectre and danah boyd
 	![Google NYC](http://distilleryimage4.ak.instagram.com/d83b3c722a1f11e3b4b422000a1f903d_8.jpg)
@@ -126,6 +135,7 @@
 	* <span class="chrono__entry NYU">NYU</span> Took a medical leave of absence from NYU Gallatin, to better sort out the pieces of my life
 * **August 2013**
 	* <span class="chrono__entry bday">me++</span> Turned 20
+	![West Side Highway](http://distilleryimage4.ak.instagram.com/341ed4ea09f011e3925f22000aa81f8f_7.jpg)
 	* <span class="chrono__entry NYU">NYU</span> <span class=
 	chrono__entry yes">Yes</span> Made Spring 2013 NYU Gallatin Dean's List
 	* Started learning Javascript and JQuery
