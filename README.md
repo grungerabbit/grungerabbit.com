@@ -1,4 +1,4 @@
-new-site
+grungerabbit.com
 ========
 
-new website
+The personal website and portal of [Cheryl Wu](http://www.grungerabbit.com)
