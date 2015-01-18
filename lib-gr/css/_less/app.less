@@ -158,6 +158,70 @@ section {
 	}
 }
 
+.cheryl-wu__typology {
+	position: relative;
+	margin: 3em 0;
+	border: 14px double black;
+	.clearfix;
+	.typology__quadrant {
+		width: 50%;
+		float: left;
+		padding: 8% 0 0 8%;
+		min-height: 20em;
+		&.rational {
+			border-right: 3px solid black;
+		}
+		&.prescriptive {
+			border-bottom: 3px solid black;
+		}
+	}
+
+	.typology__header {
+		font-family: 'Playfair Display', serif;
+		font-style: italic;
+	}
+
+@labelMargin: -25px;
+@rotateMargin: -106px;
+
+	.typology__style {
+		padding: 0.25em 0.5em;
+		background-color: white;
+		border: 1px solid black;
+		text-align: center;
+		width: 200px;
+		font-family: 'Playfair Display', serif;
+		text-transform: uppercase;
+		letter-spacing: 0.20em;
+		position: absolute;
+		&.prescriptive, &.descriptive {
+			left: 50%;
+			margin-left: -100px;
+		}
+		&.prescriptive {
+			top: 0;
+			margin-top: @labelMargin;
+		}
+		&.descriptive {
+			bottom: 0;
+			margin-bottom: @labelMargin;
+		}
+		&.rational, &.mythical {
+			top: 50%;
+		}
+		&.rational {
+			transform: rotate(270deg);
+			left: 0;
+			margin-left: @rotateMargin;
+		}
+		&.mythical {
+			transform: rotate(90deg);
+			right: 0;
+			margin-right: @rotateMargin;
+		}
+	}
+}
+
 /* footer */
 .footer {
 	//background: url(../bg2.png) left center;

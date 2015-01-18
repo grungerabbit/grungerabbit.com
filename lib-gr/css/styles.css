@@ -327,6 +327,75 @@ section {
   visibility: visible;
   color: #cc00ff;
 }
+.cheryl-wu__typology {
+  position: relative;
+  margin: 3em 0;
+  border: 14px double black;
+  *zoom: 1;
+}
+.cheryl-wu__typology:before,
+.cheryl-wu__typology:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.cheryl-wu__typology:after {
+  clear: both;
+}
+.cheryl-wu__typology .typology__quadrant {
+  width: 50%;
+  float: left;
+  padding: 8% 0 0 8%;
+  min-height: 20em;
+}
+.cheryl-wu__typology .typology__quadrant.rational {
+  border-right: 3px solid black;
+}
+.cheryl-wu__typology .typology__quadrant.prescriptive {
+  border-bottom: 3px solid black;
+}
+.cheryl-wu__typology .typology__header {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+.cheryl-wu__typology .typology__style {
+  padding: 0.25em 0.5em;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  width: 200px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  position: absolute;
+}
+.cheryl-wu__typology .typology__style.prescriptive,
+.cheryl-wu__typology .typology__style.descriptive {
+  left: 50%;
+  margin-left: -100px;
+}
+.cheryl-wu__typology .typology__style.prescriptive {
+  top: 0;
+  margin-top: -25px;
+}
+.cheryl-wu__typology .typology__style.descriptive {
+  bottom: 0;
+  margin-bottom: -25px;
+}
+.cheryl-wu__typology .typology__style.rational,
+.cheryl-wu__typology .typology__style.mythical {
+  top: 50%;
+}
+.cheryl-wu__typology .typology__style.rational {
+  transform: rotate(270deg);
+  left: 0;
+  margin-left: -106px;
+}
+.cheryl-wu__typology .typology__style.mythical {
+  transform: rotate(90deg);
+  right: 0;
+  margin-right: -106px;
+}
 /* footer */
 .footer {
   padding: 2em 0 0.5em;
