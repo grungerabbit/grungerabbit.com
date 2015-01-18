@@ -361,6 +361,9 @@ section {
 .cheryl-wu__typology .typology__quadrant > .typology__result {
   font-size: 300%;
 }
+.cheryl-wu__typology .typology__quadrant:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
 .cheryl-wu__typology .typology__header {
   font-family: 'Playfair Display', serif;
   font-style: italic;

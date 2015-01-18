@@ -9,23 +9,24 @@
 			if ($("#typologyMadras").length > 0) {
 				grungerabbit.madras();
 			} else {
-				$(".splash .title, .name, .play a").lettering();
-				var c = "";
-				$(".splash .title span").each(function() {
-					$(this).append("<em>"+$(this).text()+"</em>");
-				});
+				grungerabbit.splash();
+			}
+		},
+		"splash": function() {
+			$(".splash .title, .name, .play a").lettering();
+			var c = "";
+			$(".splash .title span").each(function() {
+				$(this).append("<em>"+$(this).text()+"</em>");
+			});
 
-				if ($("body").width() < 640) {
-					$(".splash .title span:nth-child(6)").after("<br> -");
-				}
+			if ($("body").width() < 640) {
+				$(".splash .title span:nth-child(6)").after("<br> -");
 			}
 		},
 		"madras": function() {
 			var $typo = $("#typologyMadras").parent()
 			var madrasX = $typo.width();
 			var madrasY = $typo.height();
-
-
 			var paper = Raphael("typologyMadras", madrasX, madrasY);
 
 			var Madras = function(originX, originY, widthX, widthY) {
@@ -254,8 +255,6 @@
 			var mad = new Madras();
 			mad.init();
 		}
-	
-		
 	}
 	$(document).ready(function() {
 		grungerabbit.init();
