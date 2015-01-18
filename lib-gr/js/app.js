@@ -1,12 +1,4 @@
-$(".splash .title, .name, .play a").lettering();
-var c = "";
-$(".splash .title span").each(function() {
-	$(this).append("<em>"+$(this).text()+"</em>");
-});
 
-if ($("body").width() < 640) {
-	$(".splash .title span:nth-child(6)").after("<br> -");
-}
 
 (function($){
 	var grungerabbit = {
@@ -14,8 +6,19 @@ if ($("body").width() < 640) {
 			
 		},
 		"init" : function() {
-			grungerabbit.madras();
+			if ($("#typologyMadras").length > 0) {
+				grungerabbit.madras();
+			} else {
+				$(".splash .title, .name, .play a").lettering();
+				var c = "";
+				$(".splash .title span").each(function() {
+					$(this).append("<em>"+$(this).text()+"</em>");
+				});
 
+				if ($("body").width() < 640) {
+					$(".splash .title span:nth-child(6)").after("<br> -");
+				}
+			}
 		},
 		"madras": function() {
 			var $typo = $("#typologyMadras").parent()
@@ -48,7 +51,7 @@ if ($("body").width() < 640) {
 				var yellow = this.colors.yellow;
 			
 				// DOWN
-				var x = 3;
+				var x = 1;
 				do {
 					x--;
 					this.downMacro(stripe, pink, teal, white);
@@ -250,7 +253,6 @@ if ($("body").width() < 640) {
 
 			var mad = new Madras();
 			mad.init();
-	
 		}
 	
 		

@@ -358,6 +358,9 @@ section {
 .cheryl-wu__typology .typology__quadrant.prescriptive {
   border-bottom: 3px solid black;
 }
+.cheryl-wu__typology .typology__quadrant > .typology__result {
+  font-size: 300%;
+}
 .cheryl-wu__typology .typology__header {
   font-family: 'Playfair Display', serif;
   font-style: italic;
