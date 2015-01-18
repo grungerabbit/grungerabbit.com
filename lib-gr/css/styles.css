@@ -342,6 +342,10 @@ section {
 .cheryl-wu__typology:after {
   clear: both;
 }
+.cheryl-wu__typology svg {
+  position: absolute !important;
+  z-index: -1;
+}
 .cheryl-wu__typology .typology__quadrant {
   width: 50%;
   float: left;
