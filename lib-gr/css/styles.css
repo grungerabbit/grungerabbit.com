@@ -155,7 +155,6 @@ a:hover {
   width: 1em;
   display: inline-block;
 }
-/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -166,11 +165,9 @@ body {
 }
 ::selection {
   background: #ffb7b7;
-  /* Safari */
 }
 ::-moz-selection {
   background: #ffb7b7;
-  /* Firefox */
 }
 .container {
   width: 100%;
@@ -194,11 +191,20 @@ hr {
   border: none;
   background: #ccc;
 }
-/* headers */
-header.splash > svg {
-  position: absolute !important;
+section {
+  padding: 1em 0;
+  border-bottom: 1px solid rgba(153, 255, 221, 0.5);
 }
-header.splash .name {
+/* splash header */
+.splash > svg {
+  position: absolute !important;
+  z-index: 0;
+}
+.splash .site {
+  position: relative;
+  z-index: 5;
+}
+.splash .name {
   font-family: "BlackoutMidnight";
   margin: 0;
   padding: 0;
@@ -206,17 +212,17 @@ header.splash .name {
   text-decoration: none;
   display: inline;
 }
-header.splash .name span {
+.splash .name span {
   position: relative;
   z-index: 2;
 }
-header.splash .name span.char5 {
+.splash .name span.char5 {
   left: -0.055em;
 }
-header.splash .name span.char6 {
+.splash .name span.char6 {
   left: -0.02em;
 }
-header.splash .title {
+.splash .title {
   text-align: center;
   color: rgba(254, 0, 149, 0.9);
   font-family: "BlackoutMidnight";
@@ -226,25 +232,25 @@ header.splash .title {
   padding: 0.5em 0;
   text-transform: uppercase;
 }
-header.splash .title span {
+.splash .title span {
   position: relative;
 }
-header.splash .title span.char2 {
+.splash .title span.char2 {
   left: -0.02em;
 }
-header.splash .title span.char3 {
+.splash .title span.char3 {
   left: -0.025em;
 }
-header.splash .title span.char5 {
+.splash .title span.char5 {
   left: 0.015em;
 }
-header.splash .title span.char11 {
+.splash .title span.char11 {
   left: 0.01em;
 }
-header.splash .title span.char12 {
+.splash .title span.char12 {
   left: 0.03em;
 }
-header.splash .title em {
+.splash .title em {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -254,47 +260,40 @@ header.splash .title em {
   left: 0.01em;
   top: 0.030em;
 }
-header.splash .tagline {
-  position: relative;
-  z-index: 5;
+.splash .tagline {
   font-size: 2em;
   line-height: 1.2;
 }
-header.splash .tagline span {
+.splash .tagline span {
   font: 1.25em "BlackoutMidnight";
   display: block;
-  position: relative;
-  z-index: 5;
   top: .15em;
 }
-header.splash .icon-grlogo {
+.splash .icon-grlogo {
   font-size: 26em;
   position: absolute;
   right: 0;
   color: rgba(204, 0, 255, 0.8);
   z-index: 0;
 }
-.old__site {
+.splash .signpost {
   float: right;
   padding: 7px;
   position: relative;
   z-index: 2;
   text-decoration: underline;
 }
-.old__site:link,
-.old__site:active,
-.old__site:visited {
+.splash .signpost:link,
+.splash .signpost:active,
+.splash .signpost:visited {
   color: #fe0095;
   text-decoration: underline;
 }
-.old__site:hover {
+.splash .signpost:hover {
   color: #ffb7b7;
   text-decoration: underline;
 }
-section {
-  padding: 1em 0;
-  border-bottom: 1px solid rgba(153, 255, 221, 0.5);
-}
+/* SPLASH PAGE CONTENT AND REBUS */
 .hello {
   font-size: 150%;
 }
@@ -331,6 +330,7 @@ section {
   visibility: visible;
   color: #cc00ff;
 }
+/* GRUNGERABBIT.COM/ABOUT TYPOLOGY */
 .cheryl-wu__typology {
   position: relative;
   margin: 3em 0;

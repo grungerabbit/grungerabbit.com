@@ -1,4 +1,4 @@
-/* reset */
+// reset
 * {
 	margin: 0;
 	padding: 0;
@@ -8,10 +8,10 @@ body {
 	background: #fefeff;
 }
 ::selection {
-	background: @coral; /* Safari */
+	background: @coral; // safari
 	}
 ::-moz-selection {
-	background: @coral; /* Firefox */
+	background: @coral; // firefox
 }
 .container {
 	width: 100%;
@@ -35,15 +35,21 @@ hr {
 	border: none;
 	background: #ccc;
 }
+section {
+	padding: 1em 0;
+	border-bottom: 1px solid @mint;
+}
 
-/* headers */ 
-header.splash {
-	//background: url(../bg2.png);
-
+/* splash header */ 
+.splash {
 	> svg {
 		position: absolute !important;
+		z-index: 0;
 	}
-
+	.site {
+		position: relative;
+		z-index: 5;
+	}
 	.name {
 		font-family: @midnight;
 		margin: 0;
@@ -89,15 +95,11 @@ header.splash {
 		}
 	}
 	.tagline {
-		position: relative;
-		z-index: 5;
 		font-size: 2em;
 		line-height: 1.2;
 		span {
 			font: 1.25em @midnight;
 			display: block;
-			position: relative;
-			z-index: 5;
 			top: .15em;
 		}
 	}
@@ -108,26 +110,24 @@ header.splash {
 		color: @cofT;
 		z-index: 0;
 	}
-}
-.old__site {
-	float: right;
-	padding: 7px;
-	position: relative;
-	z-index: 2;
-	text-decoration: underline;
-	&:link, &:active, &:visited {
-		color: @grPink;
+	.signpost {
+		float: right;
+		padding: 7px;
+		position: relative;
+		z-index: 2;
 		text-decoration: underline;
-	}
-	&:hover {
-		color: @coral;
-		text-decoration: underline;
+		&:link, &:active, &:visited {
+			color: @grPink;
+			text-decoration: underline;
+		}
+		&:hover {
+			color: @coral;
+			text-decoration: underline;
+		}
 	}
 }
-section {
-	padding: 1em 0;
-	border-bottom: 1px solid @mint;
-}
+
+/* SPLASH PAGE CONTENT AND REBUS */
 .hello {
 	font-size: 150%;
 	h1 {
@@ -138,8 +138,6 @@ section {
 		margin: 1em 0;
 	}
 }
-
-// REBUS
 .rebus {
 	padding: 0.25em 0.5em;
 	background-size: contain;
@@ -167,8 +165,7 @@ section {
 	}
 }
 
-// GRUNGERABBIT.COM/ABOUT TYPOLOGY
-
+/* GRUNGERABBIT.COM/ABOUT TYPOLOGY */
 @labelMargin: -25px;
 @rotateMargin: -106px;
 
