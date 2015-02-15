@@ -38,7 +38,12 @@ hr {
 
 /* headers */ 
 header.splash {
-	background: url(../bg2.png);
+	//background: url(../bg2.png);
+
+	> svg {
+		position: absolute !important;
+	}
+
 	.name {
 		font-family: @midnight;
 		margin: 0;
@@ -48,6 +53,7 @@ header.splash {
 		display: inline;
 		span {
 			position: relative;
+			z-index: 2;
 			&.char5 {
 				left: -0.055em;
 			}
@@ -83,12 +89,15 @@ header.splash {
 		}
 	}
 	.tagline {
+		position: relative;
+		z-index: 5;
 		font-size: 2em;
 		line-height: 1.2;
 		span {
 			font: 1.25em @midnight;
 			display: block;
 			position: relative;
+			z-index: 5;
 			top: .15em;
 		}
 	}

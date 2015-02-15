@@ -195,8 +195,8 @@ hr {
   background: #ccc;
 }
 /* headers */
-header.splash {
-  background: url(../bg2.png);
+header.splash > svg {
+  position: absolute !important;
 }
 header.splash .name {
   font-family: "BlackoutMidnight";
@@ -208,6 +208,7 @@ header.splash .name {
 }
 header.splash .name span {
   position: relative;
+  z-index: 2;
 }
 header.splash .name span.char5 {
   left: -0.055em;
@@ -254,6 +255,8 @@ header.splash .title em {
   top: 0.030em;
 }
 header.splash .tagline {
+  position: relative;
+  z-index: 5;
   font-size: 2em;
   line-height: 1.2;
 }
@@ -261,6 +264,7 @@ header.splash .tagline span {
   font: 1.25em "BlackoutMidnight";
   display: block;
   position: relative;
+  z-index: 5;
   top: .15em;
 }
 header.splash .icon-grlogo {
