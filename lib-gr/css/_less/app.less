@@ -1,44 +1,13 @@
-/* reset */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-body {
-	background: #fefeff;
-}
-::selection {
-	background: @coral; /* Safari */
+/* splash header */ 
+.splash {
+	> svg {
+		position: absolute !important;
+		z-index: 0;
 	}
-::-moz-selection {
-	background: @coral; /* Firefox */
-}
-.container {
-	width: 100%;
-	margin: 0 auto;
-}
-.site {
-	margin: 0 auto;
-	img {
-		max-width: 100%;
+	.site {
+		position: relative;
+		z-index: 5;
 	}
-}
-.content {
-	min-height: 30em;
-	padding: 0 0 2em;
-}
-li {
-	list-style: none;
-}
-hr {
-	height: .05em;
-	border: none;
-	background: #ccc;
-}
-
-/* headers */ 
-header.splash {
-	background: url(../bg2.png);
 	.name {
 		font-family: @midnight;
 		margin: 0;
@@ -48,6 +17,7 @@ header.splash {
 		display: inline;
 		span {
 			position: relative;
+			z-index: 2;
 			&.char5 {
 				left: -0.055em;
 			}
@@ -88,7 +58,6 @@ header.splash {
 		span {
 			font: 1.25em @midnight;
 			display: block;
-			position: relative;
 			top: .15em;
 		}
 	}
@@ -99,26 +68,24 @@ header.splash {
 		color: @cofT;
 		z-index: 0;
 	}
-}
-.old__site {
-	float: right;
-	padding: 7px;
-	position: relative;
-	z-index: 2;
-	text-decoration: underline;
-	&:link, &:active, &:visited {
-		color: @grPink;
+	.signpost {
+		float: right;
+		padding: 7px;
+		position: relative;
+		z-index: 2;
 		text-decoration: underline;
-	}
-	&:hover {
-		color: @coral;
-		text-decoration: underline;
+		&:link, &:active, &:visited {
+			color: @grPink;
+			text-decoration: underline;
+		}
+		&:hover {
+			color: @coral;
+			text-decoration: underline;
+		}
 	}
 }
-section {
-	padding: 1em 0;
-	border-bottom: 1px solid @mint;
-}
+
+/* SPLASH PAGE CONTENT AND REBUS */
 .hello {
 	font-size: 150%;
 	h1 {
@@ -129,8 +96,6 @@ section {
 		margin: 1em 0;
 	}
 }
-
-// REBUS
 .rebus {
 	padding: 0.25em 0.5em;
 	background-size: contain;
@@ -158,8 +123,7 @@ section {
 	}
 }
 
-// GRUNGERABBIT.COM/ABOUT TYPOLOGY
-
+/* GRUNGERABBIT.COM/ABOUT TYPOLOGY */
 @labelMargin: -25px;
 @rotateMargin: -106px;
 
