@@ -174,7 +174,7 @@ a:hover {
   width: 32%;
 }
 .grid.half li {
-  width: 49%;
+  width: 47%;
 }
 .grid:after {
   content: '';
